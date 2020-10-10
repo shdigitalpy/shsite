@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Digital durchstarten | SH Digital AG {% endblock %}
+{% block meta_description %}Das ist die Meta Beschreibung SEO optimiert.{% endblock %}
+{% block keywords %}Online Kennzahlen, Kundengewinnung, Online Marketing {% endblock %}
+
+{% block content %}
+
+
+    <!--SENDMAIL Start--> {% if message_surname %}
+            <div id="home"><div class="landing-text"><p>Die Nachricht wurde gesendet! Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div></div>
+            {% else %}
+    <!--SENDMAIL End-->
+
+      <div id="home">
+        <div class="landing-text">
+          <h1>Digital durchstarten</h1>
+          <h3>für Kleinunternehmer, Selbständige und Startups</h3>
+          <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
+        </div>
+      </div>
+    
+       <!--CONTACT FORM Start-->
+          <div id="contact-form" class="padding">
+          <div class="container formcontainer">
+              <h4>In welchem Bereich Ihres Unternehmens fehlt es Ihnen an Digitalisierung?</h4>
+               <p><sup> Uns interessiert, was Sie im Unternehmeralltag am meisten beschäfigt? Die Antwort von Ihnen wird anonym publiziert unter <a href="#contact-form">ANTWORTEN</a> und Ihre Daten absolut vertrautlich behandelt. Es gibt keine Newsletter oder Werbungen von uns.</sup></p>
+                <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
+
+            
+                   <form id="contact-form" method="POST" action="{% url 'index' %}">
+                    {% csrf_token %}
+
+                     <div class="messages"></div>
+
+                     <div class="controls">
+
+                      <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input id="form_name" type="text" name="name" class="form-control" placeholder="Vorname" required="required" data-error="Firstname is required.">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nachname" required="required" data-error="Lastname is required.">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input id="form_email" type="email" name="email" class="form-control" placeholder="E-Mail" required="required" data-error="Valid email is required.">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                             <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Telefon (optional)">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea id="form_message" name="message" class="form-control" placeholder="Ihre Antwort" rows="4" required data-error="Please,leave us a message."></textarea>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <input type="submit" class="btn btn-warning btn-lg btn-send" value="Antwort abschicken">
+                          </div>
+                        </div>
+                 
+                    </div>
+
+                  </form>
+
+              </div>
+
+            </div>
+            </div>
+         </div>
+        <!--CONTACT FORM End-->
+        
+
+        <!--erste Reihe -->
+        <div class="padding">
+        <div class="container kleiner">
+        <div class="row">
+
+        
+        <div class="col-sm-6">
+          <img src="{% static '/images/pc-bildschirm.png' %}">
+        </div>
+
+        <div class="col-sm-6 text-center">
+          <h2>Digital ist Chefsache</h2>
+          <p class="lead">Für die Webseite, Buchhaltung, Finanzkennzahlen oder Online Marketing, welche Sofware soll man als Kleinunternehmer verwenden? Das Angebot ist vielfältig, Nutzen und Preis meist weit auseinander. Um sich mit Google Analytics, Webentwicklung, Finanzsoftware und vielem mehr zurechtzufinden, benötigt man viel Zeit und die entsprechenden Fachkenntnisse. Bestehende Lösungen sind komplex und in der Regel für Fachspezialisten bei Grossunternehmen ausgelegt. Sich als Anwender tief in eine Materie einzuarbeiten bzw. verschiedene Softwarelösungen zu verwenden ist im (Klein-)Unternehmeralltag schlichtweg unmöglich. Einen Online Marketing- oder Digitalexperten oder ähnliches intern oder extern anzustellen ist preislich nicht attraktiv und digitale Unternehmensführung sollte Chefsache sein.</p>
+        </div>   
+
+          </div>
+          </div>
+          </div>
+
+          <!--zweite Reihe -->
+          <div class="padding">
+          <div class="container">
+          <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <i class="fas fa-chart-line"></i>
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h3>Systematische Digitalisierung</h3>
+          <ul>
+          <li>CMS Systeme für die Webseitenverwaltung</li>
+          <li>Analytics / Suchrankings für Ihre Webseite</li>
+          <li>Online Shop / E-Commerce für Ihre Produkte</li>
+          <li>Digitale Ads bei Facebook und Google</li>
+          <li>Finanzkennzahlen, Unternehmenswert, Gewinn, Produktmarge, Umsatzanalyse</li>
+          <li>Geschäftsprozesse, Mitarbeiterführung, Rekrutierung</li>
+          <li>Ziele, Unternehmer-Mindset, Work-Life-Balance</li>
+          </ul>
+          <br>
+          <h4>Für Inhaber und Geschäftsführer</h4>
+          <p>Diese Bereiche in einer Lösung vereint und das Ganze einfach in der Handhabung. Unser Tool ist die Digitalisierung der wichtigsten Bereiche des Inhabers und der Geschäftsleitung.</p>
+          </div>
+          
+          </div>
+          </div>
+          </div>
+
+           <!--dritte Reihe -->
+          
+          <div class="padding" id="kpi">
+          <div class="container">
+          <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="allinone">
+          <h3>Alles in einem Tool</h3>
+          <p>Ein Online Tool zur Unternehmensführung von Kleinunternehmen, Selbständige oder Startups digitalisiert. Die Erfahrung von langjährigen Unternehmern hat gezeigt, dass die Digitalisierung und der Trend in Richtung Online die Bereiche eines Unternehmens in den ersten fünf bis zehn Jahre massiv verändert hat. Als Unternehmer sind Sie gezwungen sämtliche operative und strategische Tätigkeiten online zu managen und die Neukundengewinnung hat sich beinahe komplett ins Internet verlagert.</p>
+          </div>
+
+          <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <img src="{% static '/images/rocket.gif' %}" class="img-responsive" style="width: 80%">
+          </div>-->     
+
+          </div>
+          </div>
+          </div>    
+
+        <!--Background Image 
+         <div id="fixed">
+        Über CSS eingebunden 
+         </div>-->
+
+
+        <!--vierte Reihe -->
+        <div class="padding">
+        <div class="container kleiner" id="dashboard">
+        <div class="row">
+
+          <div class="col-sm-6">
+          <img src="{% static '/images/mac.jpg' %}" class="img-responsive">
+          </div>
+
+          <div class="col-sm-6">
+          <h3>Umfrage ausfüllen und ein Leben lang kostenlos nutzen</h3>
+          <p>Für Kleinunternehmer und Selbständige erarbeiten wir ein Tool als digitale Verwaltung der wichtigsten Bereiche für Inhaber und Geschäftsführer. Das Online Tool soll sehr einfach zu bedienen sein, ohne dass Sie sich bis ins Detail in den entsprechenden Themenbereich z.B. Facebook Ads einlesen müssen. Es bietet in einem Paket eine Hilfestellung bei der Zielsetzung, Geschäftsprozess-Digitalisierung, Umsatzanalyse, Unternehmenswert-Berechnung, Webseitenbesucher, Facebook Ads, Google Ads, Rankingtools und vielem mehr. Es existiert bisher die Beta Version, auf die nur ausgewählte Personen, die direkt am Projekt beteiligt sind, Zugriff haben. Helfen Sie uns weiter die Lösung zu perfektionieren. <b>Beantworten Sie unsere Frage und werden Sie einer der ersten zwanzig Nutzer, die die Software ein Leben lang kostenlos benutzen können.</b></p>
+          <a href="#contact-form" class="btn btn-warning btn-lg">Frage beanworten</a>
+          </div>
+        
+          </div>
+          </div>
+          </div>
+
+          <!--fünfte Reihe -->
+          <div class="padding">
+          <div class="container">
+          <div class="row">
+
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padding blog">
+                      <div class="card" style="width: 18rem;">
+                    <img src="{% static '/images/finanzkennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen">
+                      <div class="card-body">
+                        <h5 class="card-title">Online Kennzahlen</h5>
+                        <p class="card-text">Die wichtigsten Online Kennzahlen im Überblick. </p>
+                        <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Blog lesen</a>
+                      </div>
+                    </div>
+              </div>
+          
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padding blog">
+                      <div class="card" style="width: 18rem;">
+                    <img src="{% static '/images/facebook-ads.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Facebook Ads</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning btn-sm">Blog lesen</a>
+                      </div>
+                    </div>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 padding blog">
+                      <div class="card" style="width: 18rem;">
+                    <img src="{% static '/images/facebook-ads.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Facebook Analytics</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning btn-sm">Blog lesen</a>
+                      </div>
+                    </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
+
+
+          <!--Social Icons -->
+          {% include 'social-icons.html' %}
+          
+          {% endif %}
+
+{% endblock %}
+
+    

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Poppins', sans-serif;
+}
+
+p {
+	font-size: 1em !important;
+}
+
+
+
+/* ----------------------------------- Navigation START */
+.navbar {
+	padding: .8rem;
+}
+.navbar-nav li {
+	padding-right: 2.2rem;
+}
+
+.nav-link {
+	font-size: 1.5em !important;
+	color: white !important;
+}
+
+
+/* ----------------------------------- Navigation END */
+
+
+#home {
+	background: url('/static/images/mountains.jpeg') no-repeat center center fixed;
+	display: table;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+
+.landing-text {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.landing-text h1 {
+	font-size: 500%;
+	font-weight: 700;
+}
+
+.landing-text h3 {
+	padding: 2% 0 2% 0;
+
+}
+
+.padding {
+	padding: 65px 0;
+}
+
+.padding img {
+	width: 100%;
+}
+
+
+/* ----------------------------------- Contact Form */
+#contact-form {
+	width: 100% !important;
+	padding: 8%;
+	background-color: #23415C;
+}
+
+.formcontainer {
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 70%;
+}
+
+.formcontainer h4 {
+	color: white;
+	padding: 2%;
+	font-weight: 700;
+}
+
+.formcontainer p {
+	color: grey;
+	padding: 0 2% 2% 2%;
+	font-weight: 400;
+}
+
+.kleiner {
+	padding-top: 2%;
+}
+
+.kleiner p {
+	font-size: 0.9em !important;
+	text-align: left;
+}
+
+.kleiner h2 {
+	text-align: left;
+}
+
+.kontakt a {
+	text-decoration: none!important;
+	color: white;
+}
+
+/* ----------------------------------- Middle section */
+
+.fa-chart-line {
+	font-size: 20em;
+	color: #23415C;
+	margin: 5%;
+}
+
+#fixed {
+	background: url('/static/images/background.jpg') no-repeat center center fixed;
+	display: table;
+	height: 70%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+
+#kpi {
+	background: url('/static/images/kpi.jpg') no-repeat center center fixed;
+	display: table;
+	height: 50%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+
+#allinone {
+	background-color: #23415C;
+	color: white;
+	padding: 3%;
+	font-size: 1.2em !important;
+}
+
+.blog {
+	margin-right: 8%;
+}
+
+/* ----------------------------------- Social Icons */
+
+
+.social a {
+	font-size: 4.5em;
+	padding: 3rem;
+}
+
+.fa-facebook {
+	color: #3b5998;
+}
+
+.fa-google {
+	color: #4285f4;
+}
+
+.fa-twitter {
+	color: #00aced;
+}
+
+.fa-linkedin {
+	color: #007bb5;
+}
+
+.fa-youtube {
+	color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-google:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-youtube:hover {
+	color: #d5d5d5;
+
+}
+
+/* ----------------------------------- Social Icons END */
+
+footer {
+	width: 100%;
+	background-color: #23415C;
+	padding: 5%;
+	color: white;
+}
+
+.fa-python {
+	color: white;
+	font-size: 1em;
+	margin: 1%;
+}
+
+
+.icon {
+	max-width: 200px;
+}
+
+
+/* ----------------------------------- 768px */
+@media (max-width: 768px){
+
+	.social a {
+	font-size: 2.5em;
+	padding: 1.5rem;
+}
+
+	.landing-text h1 {
+		font-size: 300%;
+	}
+
+	.fa {
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	.icon {
+		padding-top: 5%;
+		max-width: 100px;
+	}
+}
