@@ -33,4 +33,11 @@ def index(request):
 		return render(request, 'index.html', {})
 
 def kennzahlen(request):
-	return render(request, 'blog/online-kennzahlen.html', {})
+	page_bc = 'Online Kennzahlen'
+	context = {'page_bc':page_bc}
+	return render(request, 'blog/online-kennzahlen.html', context)
+
+def dashboard_kostenlos(request):
+	page_bc = 'Dashboard Software kostenlos'
+	context = {'page_bc':page_bc}
+	return render(request, 'blog/dashboard-software-kostenlos.html', context)
