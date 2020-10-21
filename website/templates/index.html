@@ -15,35 +15,23 @@
       <div id="home">
         <div class="landing-text">
           <h1>Digital durchstarten</h1>
-          <h3>für Kleinunternehmer, Selbständige und Startups</h3>
+          <h3 class="text-secondary">für Kleinunternehmer, Selbständige und Startups</h3>
           <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
         </div>
       </div>
-    
+
+   
        <!--CONTACT FORM Start-->
-          <div id="contact-form" class="padding">
-          <div class="container formcontainer">
-            <h5>Unsere Vision ist <a href ="#chefsache" >digital ist Chefsache</a> und soll digitale Unternehmensführung unterstützen.</h5>
-              <h4>In welchem der folgenden Bereiche hat Ihr Unternehmen noch Potential?</h4>
-              <ul>
-                <li>Webseite / Marketing</li>
-                <li>Online Shop / E-Commerce für Ihre Produkte</li>
-                <li>Bezahlte Anzeigen bei Facebook und Google</li>
-                <li>Finanzkennzahlen, Unternehmenswert, Gewinn, Produktmarge und Umsatzanalyse</li>
-                <li>Geschäftsprozesse, Mitarbeiterführung und Rekrutierung</li>
-                <li>Ziele, Unternehmer-Mindset und Work-Life-Balance</li>
-              </ul>
-              <p>Bitte beschreiben Sie uns Ihr Anliegen im Detail. Wir verwenden diese Informationen zur Weiterentwicklung einer kostenlosen Software.Jede Antwort ist für uns enorm wichtig, deshalb publizieren wir die Antworten unter <a href="#contact-form">ANTWORTEN</a>. Wählen Sie selbst ob Ihr Name genannt werden soll oder nicht. Die Daten werden absolut vertrautlich behandelt und es gibt keine Newsletter. </p> 
-                <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2">
+          <div id="contact-form" class="shape">
+          <div class=" container formcontainer">
 
-            
+                <h4 class="text-warning">Jetzt kostenlos das</h4><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren.</h3>
+                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine Analyse des Online Potentials. Vielen Unternehmern ist nicht bewusst, dass man meist nur 10-20% der potentiellen Kunden erreicht. Somit haben die meisten ein Potential von 80% Wachstum und mehr. Wir legen Ihnen dar, dass es und weshalb es bei Ihnen so ist.</p>
+                   <div class="controls">                    
                    <form id="contact-form" method="POST" action="{% url 'index' %}">
-                    {% csrf_token %}
+                   {% csrf_token %}
 
-                     <div class="messages"></div>
-
-                     <div class="controls">
+                     
 
                       <div class="row">
                           <div class="col-md-6">
@@ -76,52 +64,49 @@
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
-                              <textarea id="form_message" name="message" class="form-control" placeholder="Ihre Antwort" rows="4" required data-error="Please,leave us a message."></textarea>
+                              <textarea id="form_message" name="message" class="form-control" placeholder="Ihre Antwort" required data-error="Please,leave us a message."></textarea>
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
                           <div class="col-md-12">
-                            <input type="submit" class="btn btn-warning btn-lg btn-send" value="Antwort abschicken">
+                            <input type="submit" class="btn btn-warning btn-lg btn-send" value="Anfrage senden">
                           </div>
                         </div>
+
+                      
                  
+                    </form>
                     </div>
-
-                  </form>
-
               </div>
-
-            </div>
+            
             </div>
          </div>
-        <!--CONTACT FORM End-->
-        
+        <!--CONTACT FORM End-->       
 
         <!--erste Reihe -->
-        <div class="padding" id="chefsache">
-        <div class="container kleiner">
+        <div class="container kleiner" id="chefsache">
+      
         <div class="row">
 
         
-        <div class="col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <img src="{% static '/images/pc-bildschirm.png' %}">
         </div>
 
-        <div class="col-sm-6 text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="digitalbox">
           <h2>Digital ist Chefsache</h2>
           <p class="lead">Für die Webseite, Buchhaltung, Finanzkennzahlen oder Online Marketing, welche Sofware soll man als Kleinunternehmer verwenden? Das Angebot ist vielfältig, Nutzen und Preis meist weit auseinander. Um sich mit Google Analytics, Webentwicklung, Finanzsoftware und vielem mehr zurechtzufinden, benötigt man viel Zeit und die entsprechenden Fachkenntnisse. Bestehende Lösungen sind komplex und in der Regel für Fachspezialisten bei Grossunternehmen ausgelegt. Sich als Anwender tief in eine Materie einzuarbeiten bzw. verschiedene Softwarelösungen zu verwenden ist im (Klein-)Unternehmeralltag schlichtweg unmöglich. Einen Online Marketing- oder Digitalexperten oder ähnliches intern oder extern anzustellen ist preislich nicht attraktiv und digitale Unternehmensführung sollte Chefsache sein.</p>
         </div>   
 
           </div>
           </div>
-          </div>
 
           <!--zweite Reihe -->
-          <div class="padding" id="systemdigitalisierung">
+          <div class="padding">
           <div class="container">
           <div class="row">
 
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
           
           <!--Carousel-->
            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -153,7 +138,7 @@
           <!--Carousel End-->
           </div>
           
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
           <h3>Systematische Digitalisierung</h3>
           <ul>
           <li>CMS Systeme für die Webseitenverwaltung</li>
@@ -174,21 +159,23 @@
           </div>
 
            <!--dritte Reihe -->
-          
-          <div class="padding" id="kpi">
+          <div class="padding">
           <div class="container">
           <div class="row">
 
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="allinone">
-          <h3>Wie kann die Software kostenlos sein</h3>
-          <p>Weil es ein kombiniertes Online Tool zur Unternehmensführung und Marketing von Kleinunternehmen, Selbständige oder Startups braucht. Die Erfahrung von langjährigen Unternehmern hat gezeigt, dass die Digitalisierung und der Online-Trend die Bereiche eines Unternehmens in den ersten fünf bis zehn Jahre massiv verändert hat. Als Unternehmer sind Sie gezwungen sämtliche operative und strategische Tätigkeiten online zu managen und die Neukundengewinnung sollte täglich gemessen werden. Wir sind transparent bezüglich dem Geschäftsmodell, natürlich müssen wir auch etwas verdienen. Als Kunde können Sie jedoch die Software von A-Z kostenlos nutzen, es gibt daneben die Möglichkeit einzelne Prozesse an uns abzutreten. Dafür erheben wir eine mit dem Kunden vorher festgelegte Monatspauschale.</p>
+
+          <div class="col-sm-6">
+          <img src="{% static '/images/umfrage-ausfuellen.jpg' %}" class="img-responsive">
           </div>
 
-          <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <img src="{% static '/images/rocket.gif' %}" class="img-responsive" style="width: 80%">
-          </div>-->     
-
+          <div class="col-sm-6" id="gradient">
+          <h3>Dabei sein bei den ersten 100 Kunden</h3>
+          <p>Für Kleinunternehmer und Selbständige erarbeiten wir ein Tool als digitale Verwaltung der wichtigsten Bereiche für Inhaber und Geschäftsführer. Das Online Tool soll sehr einfach zu bedienen sein, ohne dass Sie sich bis ins Detail in den entsprechenden Themenbereich z.B. Facebook Ads einlesen müssen. Es bietet in einem Paket eine Hilfestellung bei der Zielsetzung, Geschäftsprozess-Digitalisierung, Umsatzanalyse, Unternehmenswert-Berechnung sowie Online Marketing und Suchmaschinenoptimierung. Es existiert bisher die Beta Version, die nicht öffentlich zugänglich ist. Helfen Sie uns weiter die Lösung zu perfektionieren. <b>Beantworten Sie unsere Frage und werden Sie einer der ersten hundert Nutzer, die die Software ein Leben lang kostenlos benutzen können.</b></p>
+          <a href="#contact-form" class="btn btn-warning btn-lg">Frage beanworten</a>
           </div>
+        
+
+          
           </div>
           </div>   
 
@@ -197,16 +184,15 @@
         <div class="container kleiner" id="dashboard">
         <div class="row">
 
-          <div class="col-sm-6">
-          <img src="{% static '/images/umfrage-ausfuellen.jpg' %}" class="img-responsive">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">       
+
+          <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY" allowfullscreen></iframe>
+          </div>
+          </div> 
+
           </div>
 
-          <div class="col-sm-6">
-          <h3>Dabei sein bei den ersten 100 Kunden</h3>
-          <p>Für Kleinunternehmer und Selbständige erarbeiten wir ein Tool als digitale Verwaltung der wichtigsten Bereiche für Inhaber und Geschäftsführer. Das Online Tool soll sehr einfach zu bedienen sein, ohne dass Sie sich bis ins Detail in den entsprechenden Themenbereich z.B. Facebook Ads einlesen müssen. Es bietet in einem Paket eine Hilfestellung bei der Zielsetzung, Geschäftsprozess-Digitalisierung, Umsatzanalyse, Unternehmenswert-Berechnung sowie Online Marketing und Suchmaschinenoptimierung. Es existiert bisher die Beta Version, die nicht öffentlich zugänglich ist. Helfen Sie uns weiter die Lösung zu perfektionieren. <b>Beantworten Sie unsere Frage und werden Sie einer der ersten hundert Nutzer, die die Software ein Leben lang kostenlos benutzen können.</b></p>
-          <a href="#contact-form" class="btn btn-warning btn-lg">Frage beanworten</a>
-          </div>
-        
           </div>
           </div>
           </div>
@@ -239,37 +225,11 @@
               </div>
             </div>
 
-           <!-- <div class="row padding">
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="card" style="width: 18rem;">
-                    <img src="{% static '/images/online-kennzahlen-traffic.jpg' %}" class="card-img-top" alt="Online Kennzahlen">
-                      <div class="card-body">
-                        <h5 class="card-title">Online Kennzahlen</h5>
-                        <p class="card-text">Diese drei Online Kennzahlen sind für Sie als Unternehmer und Ihre Webseite unverzichtbar. Wichtige Kennzahlen für das Online Marketing einfach erklärt.</p>
-                        <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Online Kennzahlen<b></a>
-                      </div>
-                    </div>
-              </div>
-          
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="card" style="width: 18rem;">
-                    <img src="{% static '/images/moon.jpg' %}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Facebook Ads</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-warning btn-sm">Blog lesen</a>
-                      </div>
-                    </div>
-              </div>
-            </div>-->
-
-
             </div>
           </div>
 
 
-          <!--Social Icons -->
-          {% include 'social-icons.html' %}
+          
           
           {% endif %}
 

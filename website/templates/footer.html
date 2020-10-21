@@ -6,18 +6,17 @@
 		<div class="col-sm-4">
 			<a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" class="icon"></a>
 			<br><br>
-			<p>Wir sind ein Team aus Schweizer<br> Digitalexperten und ehemaligen Unternehmern</p>
+			<p>Wir sind ein Team aus Schweizer<br> Digital Business Experten.</p> 
 		</div>
 
 		<div class="col-sm-4">
 		<p>Diese Webseite wurde publiziert von:</p>
 		<p>SH Digital ©  <script>document.write(new Date().getFullYear())</script></p>
-		<a href="https://www.python.org/"><i class="fab fa-python"></i></a>
 		</div>
 
-		<div class="col-sm-4 kontakt">
-		<h3>Kontakt</h3>
-		<a href="https://goo.gl/maps/PUWgHr3hVAQf1TfV6">SH Digital AG</a><br><small>in Gründung</small>
+		<div class="col-sm-4">
+		<!--Social Icons -->
+          {% include 'social-icons.html' %}
 		</div>
 
 	</div>

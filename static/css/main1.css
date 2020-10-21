@@ -10,6 +10,7 @@ p {
 	font-size: 1em !important;
 }
 
+/* ----------------------------------- Badge next to logo */
 .badge-new {
 	margin-left: 2%;
 	font-size: 0.8rem;
@@ -65,37 +66,78 @@ p {
 	width: 100%;
 }
 
+.shape {
+	background: #23415C;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20vw), 0 100%);
+	margin-bottom: -20vw;
+	height: 100%;
+	overflow: visible;
+	z-index: 5;
+}
+
+#chefsache {
+	position: relative;
+	z-index: 5;
+}
+
+#chefsache img {
+	width: 95%;
+}
+
+#digitalbox {
+	background: white;
+	padding: 2% 2% 0 2%; 
+	border: 10px solid white;
+	border-radius: 25px;
+	-webkit-box-shadow: -4px 9px 30px -5px rgba(35,65,92,0.54);
+	-moz-box-shadow: -4px 9px 30px -5px rgba(35,65,92,0.54);
+	box-shadow: -4px 9px 30px -5px rgba(35,65,92,0.54);
+}
+
 
 /* ----------------------------------- Contact Form */
 #contact-form {
 	width: 100% !important;
-	padding: 8%;
 	background-color: #23415C;
+	height: 1050px;
+
 }
 
 .formcontainer {
+	padding: 3.5% 0;
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
-  	width: 70%;
 }
 
-.formcontainer h4, h5 {
+.controls {
+	background-color: grey;
+	width: 75%;
+}
+
+.formcontainer h2, h3, h4 {
 	color: white;
-	padding: 2%;
 	font-weight: 700;
 }
 
-#contact-form li {
-	color: white;
-	padding: 0.2%;
-	font-weight: 400;
+.formcontainer h2 {
+	font-weight: 900;
+	font-size: 2.5rem;
+	text-transform: uppercase;
 }
 
 .formcontainer p {
-	color: grey;
-	padding: 0 2% 2% 2%;
+	color: white;
+	padding: 1% 0;
 	font-weight: 400;
+}
+
+.embed-responsive-item {
+	border-radius: 5px;
+	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
 }
 
 .kleiner {
@@ -124,13 +166,22 @@ p {
 	margin-left: 20%;
 }
 
-#kpi {
-	background: url('/static/images/moon.jpg') no-repeat center center fixed;
-	display: table;
-	height: 70%;
-	position: relative;
-	width: 100%;
-	background-size: cover;
+/* ----------------------------------- Wie kann Software kostenlos sein */
+
+#gradient {
+	background-color: rgba(35,65,92,0.3);
+	background-image:
+	linear-gradient(45deg, 
+		#ffffff 33%, 
+		transparent 33%, 
+		transparent 66%, 
+		#ffffff 66%),
+
+	linear-gradient(135deg, 
+		#ffffff 33%, 
+		transparent 33%, 
+		transparent 66%, 
+		#ffffff 66%)
 }
 
 #allinone {
@@ -142,37 +193,40 @@ p {
 
 /* ----------------------------------- Social Icons */
 
-
-.social a {
-	font-size: 4.5em;
-	padding: 3rem;
+.social {
+	padding: 2%;
 }
 
-.fa-facebook {
+.social a {
+	font-size: 1.5em;
+	padding: 1.5rem;
+}
+
+.fa-facebook:hover {
 	color: #3b5998;
 }
 
-.fa-google {
+.fa-google:hover {
 	color: #4285f4;
 }
 
-.fa-twitter {
+.fa-twitter:hover {
 	color: #00aced;
 }
 
-.fa-linkedin {
+.fa-linkedin:hover {
 	color: #007bb5;
 }
 
-.fa-youtube {
+.fa-youtube:hover {
 	color: #bb0000;
 }
 
-.fa-facebook:hover,
-.fa-google:hover,
-.fa-twitter:hover,
-.fa-linkedin:hover,
-.fa-youtube:hover {
+.fa-facebook,
+.fa-google,
+.fa-twitter,
+.fa-linkedin,
+.fa-youtube {
 	color: #d5d5d5;
 
 }
@@ -186,24 +240,45 @@ footer {
 	color: white;
 }
 
-.fa-python {
-	color: white;
-	font-size: 1em;
-	margin: 1%;
+
+/* ----------------------------------- 900px */
+@media (max-width: 900px){
+
+
+	#contact-form {
+		height: auto;
+	}
+
+	.shape {
+		margin-bottom: 0;
+	}
+
+	.shape {
+		position: relative;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		z-index: unset;
 }
-
-
-.icon {
-	max-width: 200px;
-}
-
 
 /* ----------------------------------- 768px */
 @media (max-width: 768px){
 
 	.social a {
-	font-size: 2.5em;
-	padding: 1.5rem;
+		font-size: 2.5em;
+		padding: 1.5rem;
+}
+
+	#contact-form {
+		height: auto;
+	}
+
+	.shape {
+		margin-bottom: 0;
+	}
+
+	.shape {
+		position: relative;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		z-index: unset;
 }
 
 	.landing-text h1 {
@@ -215,10 +290,6 @@ footer {
 		padding: 10px;
 	}
 
-	.icon {
-		padding-top: 5%;
-		max-width: 100px;
-	}
 }
 
 
