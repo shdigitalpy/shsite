@@ -1,20 +1,20 @@
 {% load static %}
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid">
 	<div class="row">
 		
-		<div class="col-sm-4">
-			<a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" class="icon"></a>
+		<div class="box">
+			<a href="{% url 'index' %}"><img class="img-responsive" src="{% static 'images/logo.png' %}"></a>
 			<br><br>
 			<p>Wir sind ein Team aus Schweizer<br> Digital Business Experten.</p> 
 		</div>
 
-		<div class="col-sm-4">
+		<div class="box">
 		<p>Diese Webseite wurde publiziert von:</p>
 		<p>SH Digital ©  <script>document.write(new Date().getFullYear())</script></p>
 		</div>
 
-		<div class="col-sm-4">
+		<div class="box">
 		<!--Social Icons -->
           {% include 'social-icons.html' %}
 		</div>
@@ -29,5 +29,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
+	<!-- Reviewsonmywebsite -->
+	<script src="https://reviewsonmywebsite.com/js/v2/embed.js?id=6019c18b62403111b66e" type="text/javascript"></script>
   </body>
 </html>

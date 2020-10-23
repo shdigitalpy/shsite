@@ -25,8 +25,8 @@
           <div id="contact-form" class="shape">
           <div class=" container formcontainer">
 
-                <h4 class="text-warning">Jetzt kostenlos das</h4><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren.</h3>
-                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine Analyse des Online Potentials. Vielen Unternehmern ist nicht bewusst, dass man meist nur 10-20% der potentiellen Kunden erreicht. Somit haben die meisten ein Potential von 80% Wachstum und mehr. Wir legen Ihnen dar, dass es und weshalb es bei Ihnen so ist.</p>
+                <h3 class="text-warning">Jetzt kostenlos das</h3><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren</h3>
+                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Übersicht des Potentials, welches Ihr Unternehmer bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil unserer Anfragen sind Unternehmen, welche erst 10 - 20% der möglichen "Leads" online erreicht. Den meisten dürfen wir aufzeigen, dass noch ein Potential von 80% Wachstum und mehr besteht. Jetzt unverbindlich eine individuelle und kostenlose Analyse anfordern.</p>
                    <div class="controls">                    
                    <form id="contact-form" method="POST" action="{% url 'index' %}">
                    {% csrf_token %}
@@ -56,7 +56,7 @@
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                             <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Telefon (optional)">
+                             <input id="form_phone" type="text" name="url" class="form-control" placeholder="Webseiten URL (z.B. www.sh-digital.ch)">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -64,7 +64,7 @@
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
-                              <textarea id="form_message" name="message" class="form-control" placeholder="Ihre Antwort" required data-error="Please,leave us a message."></textarea>
+                              <textarea id="form_message" name="message" class="form-control" placeholder="Bemerkungen (Branche, Produke, usw.)" required data-error="Bitte eine Eingabe vornehmen"></textarea>
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -84,127 +84,92 @@
         <!--CONTACT FORM End-->       
 
         <!--erste Reihe -->
-        <div class="container kleiner" id="chefsache">
+        <div class="container padding" id="chefsache">
       
         <div class="row">
-
-        
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <img src="{% static '/images/pc-bildschirm.png' %}">
         </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="digitalbox">
-          <h2>Digital ist Chefsache</h2>
-          <p class="lead">Für die Webseite, Buchhaltung, Finanzkennzahlen oder Online Marketing, welche Sofware soll man als Kleinunternehmer verwenden? Das Angebot ist vielfältig, Nutzen und Preis meist weit auseinander. Um sich mit Google Analytics, Webentwicklung, Finanzsoftware und vielem mehr zurechtzufinden, benötigt man viel Zeit und die entsprechenden Fachkenntnisse. Bestehende Lösungen sind komplex und in der Regel für Fachspezialisten bei Grossunternehmen ausgelegt. Sich als Anwender tief in eine Materie einzuarbeiten bzw. verschiedene Softwarelösungen zu verwenden ist im (Klein-)Unternehmeralltag schlichtweg unmöglich. Einen Online Marketing- oder Digitalexperten oder ähnliches intern oder extern anzustellen ist preislich nicht attraktiv und digitale Unternehmensführung sollte Chefsache sein.</p>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sidetext" id="digitalbox">
+          <h2>Kundengewinnung ist Chefsache</h2>
+          <p class="lead">Lernen Sie von einem <a href="#ueberuns">erfolgreichen Unternehmer</a> durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
         </div>   
 
           </div>
           </div>
 
-          <!--zweite Reihe -->
-          <div class="padding">
-          <div class="container">
+          <!--Bewertungen -->
+          <div class="container padding" id="bewertungen">
           <div class="row">
+          
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 token">
+          <div data-romw-token="i8iU8EvQVNVZR64PHIwvIXiMR58kFcI1wMtJdNxi7DnEnWICPh"></div>
+          </div>
+          </div>
+          </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
+           <!--ZwischenReihe Video -->
+          <div class="middlevideo">
+          <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY?autoplay=1&mute=1" allowfullscreen allow="autoplay"></iframe>
+          </div>
+          </div> 
           
-          <!--Carousel-->
-           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-               <i class="fas fa-chart-pie" class="d-block w-100" alt="..."></i>
-              </div>
-              <div class="carousel-item">
-                <i class="fas fa-calculator" class="d-block w-100" alt="..."></i>
-              </div>
-              <div class="carousel-item">
-                <i class="fas fa-chart-line" class="d-block w-100" alt="..."></i>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-          <!--Carousel End-->
-          </div>
-          
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding">
-          <h3>Systematische Digitalisierung</h3>
-          <ul>
-          <li>CMS Systeme für die Webseitenverwaltung</li>
-          <li>Analytics / Suchrankings für Ihre Webseite</li>
-          <li>Online Shop / E-Commerce für Ihre Produkte</li>
-          <li>Digitale Ads bei Facebook und Google</li>
-          <li>Finanzkennzahlen, Unternehmenswert, Gewinn, Produktmarge und Umsatzanalyse</li>
-          <li>Geschäftsprozesse, Mitarbeiterführung und Rekrutierung</li>
-          <li>Ziele, Unternehmer-Mindset und Work-Life-Balance</li>
-          </ul>
-          <br>
-          <h4>Für Inhaber und Geschäftsführer</h4>
-          <p>Analysieren Sie die oben genannten Bereiche in unserer Software. Verbessern und steuern Sie die Prozesse anhand der einfachen Handhabung und der guten Übersicht. Vor allem ist unsere Lösung für Neulinge auf den genannten Bereichen gedacht. Digitalisieren Sie die Marketing- und Verkaufsaktivitäten des Inhabers und der Geschäftsleitung noch heute!.</p>
-          </div>
-          
-          </div>
-          </div>
-          </div>
 
            <!--dritte Reihe -->
-          <div class="padding">
+          <div class="belowvideo sidetext" id="3rdsection">
           <div class="container">
           <div class="row">
 
-
-          <div class="col-sm-6">
-          <img src="{% static '/images/umfrage-ausfuellen.jpg' %}" class="img-responsive">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h2>Kleinunternehmer Coaching</h2>
+          <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.—bis CHF 15'000.—je nach Kunden-Situation, Themenbereich und Branche.</p>
+          <ul class="ul-check success mr-5">
+                <li>Zugriff auf Ihr individuelles Dashboard</li>
+                <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
+                <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
+                
+              </ul>       
           </div>
 
-          <div class="col-sm-6" id="gradient">
-          <h3>Dabei sein bei den ersten 100 Kunden</h3>
-          <p>Für Kleinunternehmer und Selbständige erarbeiten wir ein Tool als digitale Verwaltung der wichtigsten Bereiche für Inhaber und Geschäftsführer. Das Online Tool soll sehr einfach zu bedienen sein, ohne dass Sie sich bis ins Detail in den entsprechenden Themenbereich z.B. Facebook Ads einlesen müssen. Es bietet in einem Paket eine Hilfestellung bei der Zielsetzung, Geschäftsprozess-Digitalisierung, Umsatzanalyse, Unternehmenswert-Berechnung sowie Online Marketing und Suchmaschinenoptimierung. Es existiert bisher die Beta Version, die nicht öffentlich zugänglich ist. Helfen Sie uns weiter die Lösung zu perfektionieren. <b>Beantworten Sie unsere Frage und werden Sie einer der ersten hundert Nutzer, die die Software ein Leben lang kostenlos benutzen können.</b></p>
-          <a href="#contact-form" class="btn btn-warning btn-lg">Frage beanworten</a>
+          </div>
+          </div>   
+          </div>
+
+
+        <!--vierte Reihe -->
+        <div class="foto-container" id="ueberuns">
+        <div class="container">
+        <div class="row">
+          
+          
+          <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">       
+          <img class="img-responsive foto" src="{% static '/images/sandro-huber1.png' %}">
+          </div> 
+
+          <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 sidetext">       
+           <h2>Bereit mit uns <br>zu arbeiten?</h2>
+           <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
+           <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse</button></a>
+           <a href="{% url 'wer_wir_sind' %}" class="btn btn-warning btn-lg">Zum Blog <b>Wer wir sind - Gründer</b></a>
+          </div> 
+          </div>
+          </div>
           </div>
         
 
-          
-          </div>
-          </div>   
-
-        <!--vierte Reihe -->
-        <div class="padding">
-        <div class="container kleiner" id="dashboard">
-        <div class="row">
-
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">       
-
-          <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY" allowfullscreen></iframe>
-          </div>
-          </div> 
-
-          </div>
-
-          </div>
-          </div>
-          </div>
-
-          <!--fünfte Reihe -->
-          <div class="padding" id="blog">
+          <!--Blog -->
+          <div class="padding sidetext gradient" id="blog">
           <div class="container">
-            <h2>SH Digital Blog - aktuelle Beiträge</h2>
+            <h2 class="blogh2">Aktuelle Themen</h2>
           <div class="row padding">
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="card" style="width: 18rem;">
-                    <img src="{% static '/images/online-kennzahlen-traffic.jpg' %}" class="card-img-top" alt="Online Kennzahlen">
+             
+
+            <!--Blog1 -->
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                      <div class="card">
+                    <img src="{% static '/images/online-kennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen">
                       <div class="card-body">
                         <h5 class="card-title">Online Kennzahlen</h5>
                         <p class="card-text">Diese drei Online Kennzahlen sind für Sie als Unternehmer und Ihre Webseite unverzichtbar. Wichtige Kennzahlen für das Online Marketing einfach erklärt.</p>
@@ -212,25 +177,37 @@
                       </div>
                     </div>
               </div>
-          
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                      <div class="card" style="width: 18rem;">
-                    <img src="{% static '/images/moon.jpg' %}" class="card-img-top" alt="Dashboard Software kostenlos">
+            
+            <!--Blog 2 -->
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                      <div class="card">
+                    <img src="{% static '/images/digital-marketing-strategien.jpg' %}" class="card-img-top" alt="Digital Marketing Strategien">
                       <div class="card-body">
-                        <h5 class="card-title">Dashboard Software</h5>
-                        <p class="card-text">Eine Dashboard Software für ein Basic Online Marketing kostenlos. Von Kunden für Kunden - Helfen Sie mit bei der Weiterentwicklung, wie es bereits andere vor Ihnen getan haben.</p>
-                        <a href="{% url 'dashboard_kostenlos' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Dashboard Software kostenlos</b></a>
+                        <h5 class="card-title">Digital Marketing Strategien</h5>
+                        <p class="card-text smalltext">Eine Dashboard Software für ein Basic Online Marketing kostenlos. Von Kunden für Kunden - Helfen Sie mit bei der Weiterentwicklung, wie es bereits andere vor Ihnen getan haben.</p>
+                        <a href="{% url 'digital_marketing_strategien' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Digital Marketing Strategien</b></a>
                       </div>
                     </div>
               </div>
-            </div>
+
+               <!--Blog 3 -->
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                      <div class="card">
+                    <img src="{% static '/images/wer-wir-sind.jpg' %}" class="card-img-top" alt="Sandro Huber">
+                      <div class="card-body">
+                        <h5 class="card-title">Wer wir sind - Gründer</h5>
+                        <p class="card-text smalltext">Sandro Huber ist Gründer von SH Digital und Ihr persönlicher Kleinunternehmer Coach. Erfahren Sie mehr über den Background und den Werdegang.</p>
+                        <a href="{% url 'wer_wir_sind' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Wer wir sind - Gründer</b></a>
+                      </div>
+                    </div>
+              </div>
+
+
 
             </div>
-          </div>
+            </div>
+            </div>
 
-
-          
-          
           {% endif %}
 
 {% endblock %}

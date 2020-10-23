@@ -7,11 +7,11 @@ def index(request):
 		message_name = request.POST['name']
 		message_surname = request.POST['surname']
 		message_email = request.POST['email']
-		message_phone = request.POST['phone']
+		message_url = request.POST['url']
 		message_body = request.POST['message']
 
 		send_mail(
-    		'Ihre Antwort - ' + message_name + message_surname,
+    		'Ihre Antwort - ' + message_name + ' ' + message_surname,
     		message_body,
     		message_email,
     		['sandro@sh-digital.ch'],
@@ -24,7 +24,7 @@ def index(request):
 			t.save()
 
 		else: 
-			t = Sender(message_name=message_name, message_surname=message_surname, message_email=message_email, message_phone=message_phone, message_body=message_body)
+			t = Sender(message_name=message_name, message_surname=message_surname, message_email=message_email, message_url=message_url, message_body=message_body)
 			t.save()
 
 		return render(request, 'index.html', {'message_surname': message_surname})
@@ -37,7 +37,12 @@ def kennzahlen(request):
 	context = {'page_bc':page_bc}
 	return render(request, 'blog/online-kennzahlen.html', context)
 
-def dashboard_kostenlos(request):
-	page_bc = 'Dashboard Software kostenlos'
+def digital_marketing_strategien(request):
+	page_bc = 'Digital Marketing Strategien'
 	context = {'page_bc':page_bc}
-	return render(request, 'blog/dashboard-software-kostenlos.html', context)
+	return render(request, 'blog/digital-marketing-strategien.html', context)
+
+def wer_wir_sind(request):
+	page_bc = 'Wer wir sind'
+	context = {'page_bc':page_bc}
+	return render(request, 'blog/wer-wir-sind.html', context)

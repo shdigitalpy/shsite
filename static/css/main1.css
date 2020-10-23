@@ -7,8 +7,37 @@ html, body {
 }
 
 p {
-	font-size: 1em !important;
+	color: #23415C;
+	font-size: 1.3rem !important;
+	font-weight: 400;
 }
+
+.padding {
+	padding: 65px 0;
+}
+
+.sidetext {
+	margin-top: 3vw;
+}
+
+.sidetext h1, h2 {
+	color: #23415C;
+	font-size: 3rem;
+	font-weight: 900;
+}
+
+.sidetext h3, h4, h5 {
+	color: #23415C;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.sidetext ul li {
+	color: #23415C;
+	font-size: 1.3rem !important;
+	font-weight: 400;
+}
+
 
 /* ----------------------------------- Badge next to logo */
 .badge-new {
@@ -19,6 +48,9 @@ p {
 /* ----------------------------------- Navigation START */
 .navbar {
 	padding: .8rem;
+	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
 }
 .navbar-nav li {
 	padding-right: 2.2rem;
@@ -31,7 +63,6 @@ p {
 
 
 /* ----------------------------------- Navigation END */
-
 
 #home {
 	background: url('/static/images/mountains.jpeg') no-repeat center center fixed;
@@ -56,10 +87,6 @@ p {
 .landing-text h3 {
 	padding: 2% 0 2% 0;
 
-}
-
-.padding {
-	padding: 65px 0;
 }
 
 .padding img {
@@ -101,7 +128,6 @@ p {
 	width: 100% !important;
 	background-color: #23415C;
 	height: 1050px;
-
 }
 
 .formcontainer {
@@ -116,15 +142,9 @@ p {
 	width: 75%;
 }
 
-.formcontainer h2, h3, h4 {
+.formcontainer h3 {
 	color: white;
 	font-weight: 700;
-}
-
-.formcontainer h2 {
-	font-weight: 900;
-	font-size: 2.5rem;
-	text-transform: uppercase;
 }
 
 .formcontainer p {
@@ -133,43 +153,70 @@ p {
 	font-weight: 400;
 }
 
-.embed-responsive-item {
+
+.token {
+	padding: 4%;
+}
+
+/* ----------------------------------- Contact Form End */
+
+
+/* ----------------------------------- 3rd section */
+
+.middlevideo {
+	background-color: #23415C;
+}
+
+.middlevideo .embed-responsive {
+	border: 10px solid white;
 	border-radius: 5px;
+	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	margin: 0 auto 5% auto;
+	width: 60%;
+	
+}
+
+.belowvideo {
+	position: relative;
+	overflow: visible;
+	z-index: 5;
+	margin-bottom: 5vw;
+}
+
+.foto-container {
+	height: 27vw;
+
+}
+
+.foto {
+	margin: -3vw 0 0 0;
+	border-radius: 20px;
 	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
 	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
 	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
 }
 
-.kleiner {
-	padding-top: 2%;
+
+
+/* ----------------------------------- Blog Preview */
+
+.card {
+	width: 100%;
+	height: 100%;
+	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
 }
 
-.kleiner p {
-	font-size: 0.9em !important;
-	text-align: left;
+.card-text {
+	font-size: 1.1rem !important;
 }
 
-.kleiner h2 {
-	text-align: left;
-}
 
-.kontakt a {
-	text-decoration: none!important;
-	color: white;
-}
-
-/* ----------------------------------- Middle section */
-
-.fa-chart-line, .fa-chart-pie, .fa-calculator {
-	font-size: 20em;
-	color: #23415C;
-	margin-left: 20%;
-}
-
-/* ----------------------------------- Wie kann Software kostenlos sein */
-
-#gradient {
-	background-color: rgba(35,65,92,0.3);
+.gradient {
+	background-color: rgba(35,65,92,0.2);
 	background-image:
 	linear-gradient(45deg, 
 		#ffffff 33%, 
@@ -182,24 +229,55 @@ p {
 		transparent 33%, 
 		transparent 66%, 
 		#ffffff 66%)
+	;
+	background-size: 2.5rem 2.5rem;
 }
 
-#allinone {
+.blogh2 {
 	background-color: #23415C;
-	color: white;
-	padding: 3%;
-	font-size: 1.2em !important;
+	color: white !important;
+	text-align: center;
+	padding: 1%;
 }
+
+
+
+/* ----------------------------------- Footer */
+
+footer {
+	width: 100%;
+	background-color: #23415C;
+	padding: 3%;
+	color: white !important;
+}
+
+footer p {
+	color: white !important;
+}
+
+footer h4 {
+	color: white !important;
+}
+
+footer .box {
+	padding: 3%;
+	width: 28% !important;
+	margin: 0 auto;
+	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+}
+
 
 /* ----------------------------------- Social Icons */
 
 .social {
-	padding: 2%;
+	margin: 5% 0 0 0;
 }
 
 .social a {
-	font-size: 1.5em;
-	padding: 1.5rem;
+	font-size: 2rem;
+	margin: 10% 10% 0 0;
 }
 
 .fa-facebook:hover {
@@ -233,73 +311,17 @@ p {
 
 /* ----------------------------------- Social Icons END */
 
-footer {
-	width: 100%;
-	background-color: #23415C;
-	padding: 5%;
-	color: white;
-}
-
-
-/* ----------------------------------- 900px */
-@media (max-width: 900px){
-
-
-	#contact-form {
-		height: auto;
-	}
-
-	.shape {
-		margin-bottom: 0;
-	}
-
-	.shape {
-		position: relative;
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-		z-index: unset;
-}
-
-/* ----------------------------------- 768px */
-@media (max-width: 768px){
-
-	.social a {
-		font-size: 2.5em;
-		padding: 1.5rem;
-}
-
-	#contact-form {
-		height: auto;
-	}
-
-	.shape {
-		margin-bottom: 0;
-	}
-
-	.shape {
-		position: relative;
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-		z-index: unset;
-}
-
-	.landing-text h1 {
-		font-size: 300%;
-	}
-
-	.fa {
-		font-size: 20px;
-		padding: 10px;
-	}
-
-}
-
-
 /* ----------------------------------- Blog-header */
 
 #blog-header {
 	width: 100%;
 	height: 70px;
 	margin: 30px 0 30px 0;
-	color: white;
+}
+
+#blog-header p {
+	color: white !important;
+	font-size: 1rem !important;
 }
 
 #blog-header ol {
@@ -309,5 +331,244 @@ footer {
 #blog-header a {
 	color: white;
 }
+
+
+
+/* ----------------------------------- 1024px Tablet*/
+@media (max-width: 1024px){
+	.container {
+		padding: 2.5%;
+	}
+
+	p {
+		font-size: 1.1rem !important;
+	}
+
+	.navbar-nav li {
+	padding-right: 1.8rem;
+	}
+
+	.nav-link {
+	font-size: 1.1rem !important;
+	color: white !important;
+	}
+
+	.sidetext {
+		padding: 0 10% 0 10%;
+	}
+
+	.sidetext h1, h2 {
+		color: #23415C;
+		font-size: 2.2rem;
+		font-weight: 900;
+	}
+
+	.sidetext h3, h4, h5 {
+		color: #23415C;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	.sidetext ul li {
+		color: #23415C;
+		font-size: 1.1rem !important;
+		font-weight: 400;
+	}
+	
+	.landing-text h1 {
+		font-size: 300%;
+	}
+
+	#contact-form {
+		height: auto;
+	}
+
+	.shape {
+		margin-bottom: 0;
+	}
+
+	.shape {
+		position: static;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		z-index: unset;
+	}
+
+	#bewertungen {
+		width: 70%;
+	}
+
+	.middlevideo .embed-responsive {
+		border: 5px solid white;
+		width: 80%;
+	}
+
+	.belowvideo {
+		position: static !important;
+		z-index: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.foto-container {
+		height: auto !important;
+
+	}
+
+	.foto {
+		display: block;
+		margin: 0 auto 5px 12%;
+		border-radius: 20px;
+		
+	}
+
+	.card {
+		width: 100%;
+		height: 95%;
+		margin: 0 auto 10% auto;
+	}
+
+	.blogh2 {
+		background-color: #23415C;
+		color: white !important;
+		text-align: center;
+		margin: 1.5% 0;
+	}
+
+	#blog .padding {
+		padding: 0;
+	}
+
+
+	footer .box {
+		padding: 2%;
+		width: 30% !important;
+		margin: 1.5%;
+		}
+
+	footer img {
+
+	}
+
+	footer p {
+		font-size: 1rem !important;
+	}
+
+	.social a {
+		font-size: 1.3em;
+	}
+
+
+
+
+/* ----------------------------------- 768px Mobile*/
+@media (max-width: 768px){
+
+	.container {
+		padding: 2.5%;
+	}
+
+	p {
+		font-size: 1.1rem !important;
+	}
+
+	.sidetext {
+		padding: 0 10% 0 10%;
+	}
+
+	.sidetext h1, h2 {
+		color: #23415C;
+		font-size: 2.2rem;
+		font-weight: 900;
+	}
+
+	.sidetext h3, h4, h5 {
+		color: #23415C;
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	.sidetext ul li {
+		color: #23415C;
+		font-size: 1.1rem !important;
+		font-weight: 400;
+	}
+	
+	.landing-text h1 {
+		font-size: 300%;
+	}
+
+	#contact-form {
+		height: auto;
+	}
+
+	.shape {
+		margin-bottom: 0;
+	}
+
+	.shape {
+		position: relative;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		z-index: unset;
+	}
+
+	#bewertungen {
+		width: 70%;
+	}
+
+	.middlevideo .embed-responsive {
+		border: 5px solid white;
+		width: 100%;
+	}
+
+	.belowvideo {
+		position: static !important;
+		z-index: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.foto-container {
+		height: auto !important;
+
+	}
+
+	.foto {
+		display: block;
+		margin: 0 auto 5px auto;
+		border-radius: 20px;
+		-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+		-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+		box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	}
+
+	.card {
+		width: 100%;
+		height: 95%;
+		margin: 0 auto 10% auto;
+	}
+
+	.blogh2 {
+		background-color: #23415C;
+		color: white !important;
+		text-align: center;
+		margin: 1.5% 0;
+	}
+
+	#blog .padding {
+		padding: 0;
+	}
+
+
+
+
+/* ----------------------------------- Social Icons Mobile */
+
+	footer .box {
+		padding: 5%;
+		width: 100% !important;
+		margin: 3%;
+		}
+
+	.social a {
+		font-size: 1.5em;
+	}
 
 
