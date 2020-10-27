@@ -29,8 +29,22 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="{% static '/js/jquery.bootstrap.modal.forms.js' %}"></script>
 	
 	<!-- Reviewsonmywebsite -->
 	<script src="https://reviewsonmywebsite.com/js/v2/embed.js?id=6019c18b62403111b66e" type="text/javascript"></script>
+
+
+	<!-- Model Form -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+	    $("#send-modal").modalForm({
+	        formURL: "{% url 'send_modal' %}"
+	    });
+
+	});
+	</script>
+	
   </body>
 </html>

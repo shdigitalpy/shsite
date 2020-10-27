@@ -1,0 +1,39 @@
+
+<form method="post" action="">
+  {% csrf_token %}
+
+ <div class="modal-header">
+   <h5 class="modal-title">Anfrage für ein kostenloses Strategiegespräch</h5>
+    <button type="button" style="color: white" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+      <p>Bitte füllen Sie dieses Formular aus, damit Sandro Huber oder jemand aus seinem Team Ihr erstes kostenloses Strategiegespräch mit Ihnen führen kann.</p>
+      <ul>
+        <li><a class="badge badge-secondary">Branchenführer werden</a> Wie Sie sich als einer der Nr. 1 Unternehmer in Ihrer Branche positionieren </li>
+        <li><a class="badge badge-secondary">Mehr Marge</a> Wie Sie höhere Margen für Ihre Produkte oder Dienstleistungen abrufen können.</li>
+        <li><a class="badge badge-secondary">Mehr Kunden</a> Wie Sie täglich mehr Kundenanfragen generieren können.</li>
+        <li><a class="badge badge-secondary">Mehr Umsatz</a> Wie Sie 5-stellige Monatsumsätze in drei Monaten erreichen.</li>
+      </ul>
+      <br>
+    {% for field in form %}
+      <div class="form-group{% if field.errors %} invalid{% endif %}">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% for error in field.errors %}
+          <p class="help-block">{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button>
+    <button type="button" class="submit-btn btn-lg btn-warning">Termin anfragen</button>
+  </div>
+
+</form>
+

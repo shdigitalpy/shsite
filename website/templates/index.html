@@ -14,8 +14,8 @@
 
       <div id="home">
         <div class="landing-text">
-          <h1>Digital durchstarten</h1>
-          <h3 class="text-secondary">für Kleinunternehmer, Selbständige und Startups</h3>
+          <h1>Digitaler Erfolg</h1>
+          <h1 class="text-secondary h1erfolg">für Kleinunternehmer, Selbständige und Startups</h1>
           <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
         </div>
       </div>
@@ -25,8 +25,8 @@
           <div id="contact-form" class="shape">
           <div class=" container formcontainer">
 
-                <h3 class="text-warning">Jetzt kostenlos das</h3><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren</h3>
-                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Übersicht des Potentials, welches Ihr Unternehmer bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil unserer Anfragen sind Unternehmen, welche erst 10 - 20% der möglichen "Leads" online erreicht. Den meisten dürfen wir aufzeigen, dass noch ein Potential von 80% Wachstum und mehr besteht. Jetzt unverbindlich eine individuelle und kostenlose Analyse anfordern.</p>
+                <h3 class="text-warning">Jetzt kostenlos und unverbindlich das</h3><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren</h3>
+                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Analyse des Potentials, welches Ihr Unternehmen bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil der aktuellen Kunden sind Kleinunternehmer, welche ein sehr gutes Produkt oder Dienstleistung anbieten, jedoch erst 10 - 20% der potentiellen Kunden erreicht. <b class="text-warning">Können Sie noch 80% und mehr mit Ihrem Unternehmen wachsen? Erfahren Sie dies in den nächsten 24 Stunden völlig kostenlos.</b></p>
                    <div class="controls">                    
                    <form id="contact-form" method="POST" action="{% url 'index' %}">
                    {% csrf_token %}
@@ -92,7 +92,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sidetext" id="digitalbox">
-          <h2>Kundengewinnung ist Chefsache</h2>
+          <h2>Kundengewinnung</h2>
           <p class="lead">Lernen Sie von einem <a href="#ueberuns">erfolgreichen Unternehmer</a> durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
         </div>   
 
@@ -123,14 +123,14 @@
           <div class="row">
 
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h2>Kleinunternehmer Coaching</h2>
-          <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.—bis CHF 15'000.—je nach Kunden-Situation, Themenbereich und Branche.</p>
+          <h2>Digital ist Chefsache</h2>
+          <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.—bis CHF 15'000.—je nach Kunden-Situation, Themenbereich und Branche. Lernen Sie wie Sie Ihr Unternehmen digital an die Spitze der Branche führen.</p>
           <ul class="ul-check success mr-5">
-                <li>Zugriff auf Ihr individuelles Dashboard</li>
                 <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
+                <li>Digitale Kundengewinnung: Erste Ergebnisse nach drei Monaten</li>
                 <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
-                
-              </ul>       
+          </ul>   
+
           </div>
 
           </div>
@@ -150,9 +150,18 @@
 
           <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 sidetext">       
            <h2>Bereit mit uns <br>zu arbeiten?</h2>
-           <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
-           <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse</button></a>
-           <a href="{% url 'wer_wir_sind' %}" class="btn btn-warning btn-lg">Zum Blog <b>Wer wir sind - Gründer</b></a>
+           <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 15 Mitarbeitern und 10 Millionen Umsatz verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
+           <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse erhalten</button></a>
+          
+          <!--Modal -->
+          <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+            </div>
+          </div>
+          </div>    
+          <!--Modal End -->
+          <button id="send-modal" type="button" class="btn btn-warning btn-lg">Termin vereinbaren</button>
           </div> 
           </div>
           </div>

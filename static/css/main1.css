@@ -12,6 +12,7 @@ p {
 	font-weight: 400;
 }
 
+
 .padding {
 	padding: 65px 0;
 }
@@ -71,6 +72,11 @@ p {
 	position: relative;
 	width: 100%;
 	background-size: cover;
+}
+
+#home .h1erfolg {
+	font-size: 2.1rem !important;
+	padding: 1%;
 }
 
 .landing-text {
@@ -198,7 +204,24 @@ p {
 	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
 }
 
+.modal-header {
+	padding: 3% !important;
+	background-color: #23415C;
+}
 
+.modal-header h5 {
+	color: #ffc107 !important;
+}
+
+.modal-body p {
+	font-size: 1rem !important;
+}
+
+.modal-body ul li {
+	font-size: 1rem !important;
+	list-style-type: none;
+	margin-left: -2%;
+}
 
 /* ----------------------------------- Blog Preview */
 

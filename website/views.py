@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from .models import Sender
+from .forms import SenderModelForm
+from django.urls import reverse_lazy
+from bootstrap_modal_forms.generic import BSModalCreateView
 
 def index(request):
 	if request.method == "POST":
@@ -46,3 +49,9 @@ def wer_wir_sind(request):
 	page_bc = 'Wer wir sind'
 	context = {'page_bc':page_bc}
 	return render(request, 'blog/wer-wir-sind.html', context)
+
+class SenderCreateView(BSModalCreateView):
+	template_name = 'send-modal.html'
+	form_class = SenderModelForm
+	success_message = 'Termin wurde erfolgreich gebucht'
+	success_url = reverse_lazy('index')
