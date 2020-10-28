@@ -5,6 +5,7 @@ from .forms import SenderModelForm
 from django.urls import reverse_lazy
 from bootstrap_modal_forms.generic import BSModalCreateView
 
+
 def index(request):
 	if request.method == "POST":
 		message_name = request.POST['name']
@@ -15,7 +16,7 @@ def index(request):
 
 		send_mail(
     		'Ihre Antwort - ' + message_name + ' ' + message_surname,
-    		message_body,
+    		message_surname + ' ' + message_name + ' möchte eine 24 Stunden Analyse.' + ' Folgende Nachricht wurde hinterlassen:' + message_body + ' ' + 'Die Url lautet: ' + message_url,
     		message_email,
     		['sandro@sh-digital.ch'],
     		fail_silently=False,
@@ -50,8 +51,14 @@ def wer_wir_sind(request):
 	context = {'page_bc':page_bc}
 	return render(request, 'blog/wer-wir-sind.html', context)
 
+def ueber_uns(request):
+	context = {}
+	return render (request, 'ueber-uns.html', context)
+
 class SenderCreateView(BSModalCreateView):
 	template_name = 'send-modal.html'
 	form_class = SenderModelForm
-	success_message = 'Termin wurde erfolgreich gebucht'
+	success_message = 'Vielen Dank. Termin wurde erfolgreich angefragt. Wir werden uns mit Ihnen in Verbindung setzen.'
 	success_url = reverse_lazy('index')
+
+	

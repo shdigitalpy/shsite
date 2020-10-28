@@ -1,9 +1,9 @@
 {% load static %}
 
 <!-- Navbar -->
-<header><nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #23415C" role="naviation">
+<header><nav class="navbar navbar-expand-lg navbar-light sticky-top" role="naviation">
 <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'index' %}"><img class="logo" width="60%" src="{% static 'images/logo.png' %}"><sup><span class="badge badge-secondary badge-new text-white">New</span></a>
+    <a class="navbar-brand" href="{% url 'index' %}"><img class="logo" width="60%" src="{% static 'images/logo.png' %}"><sup><span class="badge badge-secondary badge-new text-white">New</span></sup></a>
                 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">    
                 <span class="navbar-toggler-icon"></span>
@@ -11,10 +11,24 @@
 
           <div class="collapse navbar-collapse" id="navbarResponsive">
            <ul class="navbar-nav ml-auto">
-              <!--<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>-->
-              <li class="nav-item"><a class="nav-link" href="#digitalbox">Dienstleistungen</a></li>
+             
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dienstleistungen
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Kleinunternehmer Coaching</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Business Development</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Webdesign / Web Entwicklung</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Digital Business Studium</a>
+                </div>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#bewertungen">Bewertungen</a></li>
-              <li class="nav-item"><a class="nav-link" href="#3rdsection">Über uns</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'ueber_uns' %}">Über uns</a></li>
               <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Jetzt loslegen</button></a>
           </ul>
           </div>

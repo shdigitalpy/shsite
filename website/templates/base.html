@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,12 +14,16 @@
      <script src="https://kit.fontawesome.com/a7ed36fd84.js" crossorigin="anonymous"></script>
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     
-
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}/">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/images/site.webmanifest' %}">
 
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="{% static '/css/main1.css' %}">
 
-    <title>{% block title %} Base Html | SH Digital AG {% endblock %}</sup></title>
+    <title>{% block title %} Base Html | SH Digital AG {% endblock %}</title>
     <meta name="robots" content="index, follow">
     <meta name="description" content="{% block meta_description %}Hier steht die Meta-Description{% endblock %}">
     <meta name="keywords" content="{% block keywords %}Für, diese, Keywords, möchte, ich, ranken{% endblock %}">
@@ -30,6 +34,14 @@
 
  <!--Navbar -->
 {% include 'navbar.html' %}
+
+<!--SENDMAIL Start--> {% if messages %}
+
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+            {% endif %}
+    <!--SENDMAIL End-->
 
 {% block content %}
 
