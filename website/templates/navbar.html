@@ -18,16 +18,13 @@
                   Dienstleistungen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Kleinunternehmer Coaching</a>
+                  <a class="dropdown-item" href="{% url 'index' %}#kleinunternehmervideo">Kleinunternehmer Coaching</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Business Development</a>
+                  <a class="dropdown-item" href="{% url 'ueber_uns' %}#pricing">Business Development</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Webdesign / Web Entwicklung</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Digital Business Studium</a>
-                </div>
+                  <a class="dropdown-item" href="{% url 'ueber_uns' %}#pricing">Website überarbeiten</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#bewertungen">Bewertungen</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#bewertungen">Bewertungen</a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'ueber_uns' %}">Über uns</a></li>
               <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Jetzt loslegen</button></a>
           </ul>

@@ -5,6 +5,7 @@
 	--white: #ffffff;
 	--yellow: #ffc107;
 	--grey: #f6f6f6;
+	--lightgrey: #aaa;
 
 }
 
@@ -366,6 +367,14 @@ footer .box {
 
 /* ----------------------------------- HTML Über uns */
 
+.mainueber h2, h3, h4, p {
+	padding: 0 0 1% 0;
+}
+
+.mainueber h3, h4 {
+	color: var(--lightgrey);
+}
+
 .padding-about {
     padding: 3% 3%;
   }
@@ -379,6 +388,13 @@ footer .box {
     padding: 5% 20%;
   }
 
+#portfolio .thumbnail:hover {
+	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	height: 100%;
+}
+
 .logoab {
     color: var(--blue);
     font-size: 15rem;
@@ -386,9 +402,17 @@ footer .box {
 
  .fa-battery-full,
  .fa-calendar-alt,
- .fa-chart-line {
+ .fa-chart-line,
+ .fa-handshake,
+ .fa-heart,
+ .fa-certificate,
+ .fa-pagelines {
  	font-size: 5vw;
  }
+
+ #pricing .panel:hover {
+	border: 10px solid var(--yellow);
+}
 
  .panel {
     border: 1px solid var(--blue); 
@@ -417,7 +441,7 @@ footer .box {
 
   .panel-heading h2 {
   	color: var(--white);
-  	font-size: 2rem;
+  	font-size: 1.8rem;
   }
 
   .panel-body {
@@ -435,11 +459,11 @@ footer .box {
     background-color: white !important;
   }
   .panel-footer h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .panel-footer h4 {
-    color: #aaa;
-    font-size: 1.5rem;
+    color: var(--lightgrey);
+    font-size: 1.2rem;
   }
 
   .panel-footer small {
