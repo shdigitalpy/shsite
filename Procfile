@@ -1,1 +1,1 @@
-web: gunicorn umfrage.wsgi.application
+web: gunicorn umfrage.wsgi
