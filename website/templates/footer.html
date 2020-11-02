@@ -6,19 +6,24 @@
 		<div class="box">
 			<a href="{% url 'index' %}"><img class="img-responsive" src="{% static 'images/logo.png' %}"></a>
 			<br><br>
-			<p>Wir sind ein Team aus Schweizer<br> Digital Business Experten.</p> 
+			<p>Wir sind ein Team aus Schweizer<br> Digital Business Experten.</p>
+			<p>SH Digital ©  <script>document.write(new Date().getFullYear())</script></p>
 		</div>
 
 		<div class="box">
-		<p>Unternehmen</p>
-		<ul>
-		<li class="nav-item"><a href="{% url 'index' %}#bewertungen">Über uns</a></li>
-		<li class="nav-item"><a href="{% url 'ueber_uns' %}#vision">Vision</a></li>
-		<li class="nav-item"><a href="{% url 'ueber_uns' %}#portfolio">Projekte</a></li>
-		<li class="nav-item"><a href="{% url 'ueber_uns' %}#services">Partnerschaften</a></li>
-
+			<h4>Unternehmen</h4>
+		<ul class="nav flex-column">
+			
+				<li class="nav-item">
+			<a class="nav-link" href="{% url 'index' %}#ueberuns">Bereit mit uns zu arbeiten</a></li>
+		<li class="nav-item">
+			<a class="nav-link" href="{% url 'online_kennzahlen' %}">Online Kennzahlen Blog</a></li>
+		<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#portfolio">Projekte</a></li>
+		<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#services">Partnerschaften</a></li>
 		</ul>
-		<p>SH Digital ©  <script>document.write(new Date().getFullYear())</script></p>
+		
 		</div>
 
 		<div class="box">

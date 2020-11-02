@@ -9,7 +9,7 @@
 <div class="mainueber">
 	<!-- Subscribe -->
 	<div id="ueberheader">
-       <div class="jumbotron text-center">
+       <div class="jumbotron">
 	  <h1>Online Marketing der Zukunft</h1> 
 	  <h3>Welche Rolle spielt die Suchmaschinenplatzierung, wenn der Sprachassistent die Inhalte des ersten Treffers nimmt und wiedergibt?</h3> 
 	</div>
@@ -89,28 +89,28 @@
 
 <!-- Container (Portfolio Section) -->
 <div class="container-fluid bg-grey">
-<div id="portfolio" class="container text-center padding">
+<div id="portfolio" class="container padding">
   <h2>Portfolio</h2>
   <h4>Erfolgreiche Projekte</h4>
-  <div class="row text-center">
+  <div class="row">
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="{% static '/images/gastrodichtungen.png' %}" alt="Gastrodichtungen Website überarbeiten" width="400" height="200">
-        <p><strong>Gastrodichtungen</strong></p>
+        <p class ="port-title"><strong>Gastrodichtungen</strong></p>
         <p>Kleinunternehmer Coaching inkl. Website überarbeiten - Projektstart Herbst 2020</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="{% static '/images/arrigato.png' %}" alt="Arrigato Business Development" width="400" height="200">
-        <p><strong>Arrigato</strong></p>
+        <p class ="port-title"><strong>Home Wellness Anbieter</strong></p>
         <p>Business Development inkl. Content Marketing und Webentwicklung - Projektstart Herbst 2014 Projektende Herbst 2020</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="{% static '/images/auto-informatik.png' %}" alt="San Francisco" width="400" height="200">
-        <p><strong>Auto Informatik</strong></p>
+        <p class ="port-title"><strong>Auto Informatik</strong></p>
         <p>Kleinunternehmer Coaching inkl. Lead Generierung - Projektstart Herbst 2017</p>
       </div>
     </div>
@@ -132,9 +132,8 @@
 <!-- Container (Pricing Section) -->
 <div id="pricing" class="container padding">
   <div class="text-center">
-    <h2>Preise</h2>
+    <h2>Preise</h2></div>
     <p>Unsere Preisgestaltung ist transparent und jedem potentiellen Kunden zugänglich. Wir sind ein hochpreisiger Anbieter, wenn Sie das Budget nicht aufbringen können oder möchten, bitte fragen Sie uns nicht an.</p>
-  </div>
   <div class="row">
     <div class="col-sm-4 col-xs-12 price">
       <div class="panel panel-default">
@@ -197,6 +196,8 @@
       </div>      
     </div>         
     </div>    
+  <br><br>
+  <p class ="nurmonat"><span class="badge badge-danger">Nur diesen Monat</span> Nur noch diesen Monat pauschal CHF 2'000.-- Rabatt.<br> Gültig bis Ende {{ today }}</p>
   </div>
 </div>
 </div>

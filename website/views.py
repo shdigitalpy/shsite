@@ -4,6 +4,7 @@ from .models import Sender
 from .forms import SenderModelForm
 from django.urls import reverse_lazy
 from bootstrap_modal_forms.generic import BSModalCreateView
+from datetime import datetime
 
 
 def index(request):
@@ -52,7 +53,10 @@ def wer_wir_sind(request):
 	return render(request, 'blog/wer-wir-sind.html', context)
 
 def ueber_uns(request):
-	context = {}
+	x = datetime.now()
+	today = x.strftime('%m' + '.' + '%Y')
+
+	context = {'today': today}
 	return render (request, 'ueber-uns.html', context)
 
 class SenderCreateView(BSModalCreateView):

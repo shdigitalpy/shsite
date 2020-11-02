@@ -18,7 +18,7 @@ html, body {
 p {
 	color: var(--blue);
 	font-size: 1.3rem !important;
-	font-weight: 400;
+	font-weight: 400 !important;
 }
 
 
@@ -285,10 +285,14 @@ footer {
 
 footer p {
 	color: var(--white) !important;
+	font-size: 1.3rem !important;
 }
 
 footer h4 {
 	color: var(--white) !important;
+	text-align: left !important;
+	text-decoration: underline;
+	font-weight: 500;
 }
 
 footer .box {
@@ -300,6 +304,15 @@ footer .box {
 	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
 }
 
+footer .nav a {
+	font-size: 1.1rem !important;
+	margin: 0 !important;
+	padding: 0.4rem 0 !important;
+}
+
+footer .nav a:hover {
+	text-decoration: underline;
+}
 
 /* ----------------------------------- Social Icons */
 
@@ -388,11 +401,24 @@ footer .box {
     padding: 5% 20%;
   }
 
+#portfolio h2, h4 {
+	text-align: center;
+}
+
 #portfolio .thumbnail:hover {
 	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
 	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
 	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
 	height: 100%;
+	cursor: pointer;
+}
+
+#portfolio .thumbnail {
+	padding: 5%;
+}
+
+#portfolio .port-title {
+	margin: 5% 0 0 0;
 }
 
 .logoab {
@@ -414,20 +440,29 @@ footer .box {
 	border: 10px solid var(--yellow);
 }
 
+.nurmonat {
+	background-color: var(--blue);
+	padding: 5%;
+	color: var(--yellow);
+	opacity: 0.8;
+	font-size: 1.5rem !important;
+	text-align: center;
+	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+}
+
  .panel {
     border: 1px solid var(--blue); 
     border-radius: 0 !important;
     transition: box-shadow 0.5s;
     height: 100%;
+
   }
   .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
-  .panel-footer .btn:hover {
-    border: 1px solid var(--blue);
-    background-color: var(--white) !important;
-    color: var(--blue);
-  }
+  
   .panel-heading {
     color: var(--white) !important;
     background-color: var(--blue) !important;
@@ -457,13 +492,16 @@ footer .box {
   .panel-footer {
   	padding: 3% 6%;
     background-color: white !important;
+
   }
   .panel-footer h3 {
     font-size: 1.6rem;
+    color: var(--blue);
   }
   .panel-footer h4 {
     color: var(--lightgrey);
     font-size: 1.2rem;
+    text-align: left !important;
   }
 
   .panel-footer small {
@@ -474,6 +512,12 @@ footer .box {
     margin: 15px 0;
     background-color: var(--yellow);
     color: var(--blue);
+  }
+
+  .panel-footer .btn:hover {
+    border: 1px solid var(--red);
+    background-color: var(--red) !important;
+    color: var(--white);
   }
 
 
@@ -700,6 +744,17 @@ footer .box {
 		padding: 0;
 	}
 
+	#ueberheader .jumbotron {
+	    color: var(--blue);
+	    padding: 4% 5%;
+  }
+
+  	#ueberheader h1 {
+		font-size: 1.9rem !important;
+  }
+	#ueberheader h3 {
+	 	font-size: 1.5rem !important;
+	 }
 
 
 
