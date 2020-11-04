@@ -595,6 +595,18 @@ footer .nav a:hover {
 		font-size: 1.1rem !important;
 		font-weight: 400;
 	}
+
+	#home {
+		background: url('/static/images/digitale-berge.gif') no-repeat center center fixed;
+		display: table;
+		height: 100%;
+		position: relative;
+		width: 100%;
+		-o-background-size: cover;
+	    -moz-background-size: cover;
+	    -webkit-background-size: cover;
+	    background-size: cover;
+}
 	
 	.landing-text h1 {
 		font-size: 300%;
@@ -713,6 +725,18 @@ footer .nav a:hover {
 		font-weight: 400;
 	}
 	
+	#home {
+		background: url('/static/images/digitale-berge.gif') no-repeat center center fixed;
+		display: table;
+		height: 100%;
+		position: relative;
+		width: 100%;
+		-o-background-size: cover;
+	    -moz-background-size: cover;
+	    -webkit-background-size: cover;
+	    background-size: cover;
+}
+
 	.landing-text h1 {
 		font-size: 300%;
 	}
