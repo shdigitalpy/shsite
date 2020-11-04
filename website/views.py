@@ -39,7 +39,8 @@ def index(request):
 
 def kennzahlen(request):
 	page_bc = 'Online Kennzahlen'
-	context = {'page_bc':page_bc}
+	page_k = 'Online Kennzahlen für Kleinunternehmer, Selbständige und Startups'
+	context = {'page_bc':page_bc, 'page_k': page_k}
 	return render(request, 'blog/online-kennzahlen.html', context)
 
 def digital_marketing_strategien(request):
@@ -53,10 +54,11 @@ def wer_wir_sind(request):
 	return render(request, 'blog/wer-wir-sind.html', context)
 
 def ueber_uns(request):
+	
 	x = datetime.now()
 	today = x.strftime('%m' + '.' + '%Y')
 
-	context = {'today': today}
+	context = {'today': today }
 	return render (request, 'ueber-uns.html', context)
 
 class SenderCreateView(BSModalCreateView):
