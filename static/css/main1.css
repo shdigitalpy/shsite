@@ -89,7 +89,7 @@ p {
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
 { @media {
     #home {
-	background: url('/static/images/digitale-berg.jpg') no-repeat center center fixed;
+	background: url('/static/images/digitale-berge.gif') no-repeat center center fixed;
 	display: table;
 	position: relative;
 	width: 100%;
