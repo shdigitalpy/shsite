@@ -559,7 +559,7 @@ footer .nav a:hover {
 { @media {
 
 	#home {
-	background: url('/static/images/digitale-berge.gif') no-repeat fixed top left !important;
+	background: url('/static/images/digitale-berge.gif') no-repeat fixed top left;
 	display: table;
 	position: relative;
 	width: 100%;
