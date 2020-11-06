@@ -1,41 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
+/* ----------------------------------- Main CSS elements */
+:root {
+	--blue:	#23415c;
+	--white: #ffffff;
+	--yellow: #ffc107;
+	--grey: #f6f6f6;
+	--lightgrey: #aaa;
+	--darkergrey: #A0A0A0;
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Poppins', sans-serif;
 }
 
-p {
-	font-size: 1em !important;
+p, ul li {
+	color: var(--blue);
+	font-size: 1.2rem !important;
+	font-weight: 500 !important;
 }
 
+p {
+	padding: 2%;
+}
 
+h1 {
+	font-size: 4rem !important;
+	font-weight: 900;
+}
 
-/* ----------------------------------- Navigation START */
+h2 {
+	font-size: 3rem !important;
+	font-weight: 800;
+}
+
+h3, h4 {
+	font-size: 1.7rem !important;
+	font-weight: 700;
+}
+
+h5 {
+	font-size: 1.6rem !important;
+	font-weight: 500 !important;
+}
+
+.padding {
+	padding: 5% 0;
+}
+
+.padding img {
+	width: 100%;
+}
+
+/* ----------------------------------- Navigation */
 .navbar {
 	padding: .8rem;
+	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	background-color: var(--blue);
 }
 .navbar-nav li {
 	padding-right: 2.2rem;
 }
 
 .nav-link {
-	font-size: 1.5em !important;
-	color: white !important;
+	font-size: 1.5rem !important;
+	color: var(--white) !important;
 }
 
 
-/* ----------------------------------- Navigation END */
+.badge-new {
+	margin-left: 2%;
+	font-size: 0.8rem;
+}
 
+
+/* ----------------------------------- Home bgimage and title */
 
 #home {
 	background: url('/static/images/mountains.jpeg') no-repeat center center fixed;
 	display: table;
-	height: 100%;
 	position: relative;
 	width: 100%;
-	background-size: cover;
+	height: 100%;
+	-o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .landing-text {
@@ -44,183 +98,267 @@ p {
 	vertical-align: middle;
 }
 
-.landing-text h1 {
-	font-size: 500%;
-	font-weight: 700;
+.landing-text h2 {
+	color: var(--darkergrey);
+	
 }
 
-.landing-text h3 {
-	padding: 2% 0 2% 0;
+/* ----------------------------------- shape and contact */
 
-}
-
-.padding {
-	padding: 65px 0;
-}
-
-.padding img {
-	width: 100%;
-}
-
-
-/* ----------------------------------- Contact Form */
 #contact-form {
 	width: 100% !important;
-	padding: 8%;
-	background-color: #23415C;
+	background-color: var(--blue);
+	height: 1050px;
 }
 
 .formcontainer {
+	padding: 3.5% 0;
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
-  	width: 70%;
 }
 
-.formcontainer h4 {
-	color: white;
-	padding: 2%;
-	font-weight: 700;
+.controls {
+	background-color: var(--darkergrey);
+	width: 75%;
+}
+
+.formcontainer h2, h3 {
+	color: var(--yellow);
 }
 
 .formcontainer p {
-	color: grey;
-	padding: 0 2% 2% 2%;
-	font-weight: 400;
+	color: var(--white);
 }
 
-.kleiner {
-	padding-top: 2%;
+.reviews {
+	padding: 4%;
 }
 
-.kleiner p {
-	font-size: 0.9em !important;
-	text-align: left;
-}
-
-.kleiner h2 {
-	text-align: left;
-}
-
-.kontakt a {
-	text-decoration: none!important;
-	color: white;
-}
-
-/* ----------------------------------- Middle section */
-
-.fa-chart-line {
-	font-size: 20em;
-	color: #23415C;
-	margin: 5%;
-}
-
-#fixed {
-	background: url('/static/images/background.jpg') no-repeat center center fixed;
-	display: table;
-	height: 70%;
+.shape {
+	background: var(--blue);
 	position: relative;
-	width: 100%;
-	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20vw), 0 100%);
+	margin-bottom: -20vw;
+	height: 100%;
+	overflow: visible;
+	z-index: 5;
 }
 
-#kpi {
-	background: url('/static/images/kpi.jpg') no-repeat center center fixed;
-	display: table;
-	height: 50%;
+/* ----------------------------------- Kundengewinnung */
+
+#kundengewinn {
 	position: relative;
-	width: 100%;
-	background-size: cover;
+	z-index: 5;
 }
 
-#allinone {
-	background-color: #23415C;
-	color: white;
+#kundengewinn img {
+	max-width: 100%;
+	height: auto;
+}
+
+#digitalbox {
+	background: var(--white);
+	padding: 3%; 
+	border: 20px solid var(--grey);
+	border-radius: 40px;
+	-webkit-box-shadow: -4px 9px 30px -5px rgba(35,65,92,0.54);
+	-moz-box-shadow: -4px 9px 30px -5px rgba(35,65,92,0.54);
+	box-shadow: -4px 9px 30px -5px rgba(35,65,92,0.54);
+}
+
+.bluetext h2 {
+	color: var(--blue);
+}
+
+.bluetext h3, h4, h5 {
+	color: var(--blue);
+}
+
+.bluetext ul li {
+	color: var(--blue);
+}
+
+
+/* ----------------------------------- Bewertungen */
+
+/* ----------------------------------- Video */
+.middlevideo {
+	background-color: var(--blue);
+}
+
+.middlevideo .embed-responsive {
+	border: 12px solid var(--grey);
+	border-radius: 5px;
+	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	margin: 0 auto 5% auto;
+	width: 60%;
+}
+
+
+/* ----------------------------------- Chefsache / Bereit mit uns zu arbeiten */
+
+.chefsache {
+	position: relative;
+	overflow: visible;
+	z-index: 5;
+	margin-bottom: 7vw;
+}
+
+.foto-container {
+	margin-bottom: 3%;
+}
+
+.foto {
+	max-width: 100%;
+	height: auto;
+	margin: -2vw 0 0 0;
+	border-radius: 20px;
+	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+}
+
+.modal-header {
+	padding: 3% !important;
+	background-color: var(--blue);
+}
+
+.modal-header h5 {
+	color: var(--yellow) !important;
+}
+
+
+.modal-body ul li {
+	list-style-type: none;
+	margin-left: -2%;
+	font-size: 1.1rem !important;
+}
+
+/* ----------------------------------- Blog Preview */
+
+.card {
+	width: 100%;
+	height: 100%;
+	-webkit-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 43px -3px rgba(0,0,0,0.74);
+}
+
+.card-text {
+	font-size: 1.1rem !important;
+}
+
+
+.gradient {
+	background-color: rgba(35,65,92,0.2);
+	background-image:
+	linear-gradient(45deg, 
+		#ffffff 33%, 
+		transparent 33%, 
+		transparent 66%, 
+		#ffffff 66%),
+
+	linear-gradient(135deg, 
+		#ffffff 33%, 
+		transparent 33%, 
+		transparent 66%, 
+		#ffffff 66%)
+	;
+	background-size: 2.5rem 2.5rem;
+}
+
+.blogh2 {
+	background-color: var(--blue);
+	color: var(--white) !important;
+	text-align: center;
+	padding: 1%;
+}
+
+
+/* ----------------------------------- Footer */
+
+footer {
+	width: 100%;
+	background-color: var(--blue);
 	padding: 3%;
-	font-size: 1.2em !important;
+	color: var(--white) !important;
 }
 
-.blog {
-	margin-right: 8%;
+footer p {
+	color: var(--white) !important;
+}
+
+footer h4 {
+	color: var(--white) !important;
+	text-align: left !important;
+	text-decoration: underline;
+}
+
+footer .box {
+	padding: 3%;
+	width: 28% !important;
+	margin: 0 auto;
+	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+	box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
+}
+
+footer .box img {
+	max-width: 100%;
+	height: auto;
+}
+
+footer .nav a {
+	font-size: 1.1rem !important;
+	margin: 0 !important;
+	padding: 0.4rem 0 !important;
+}
+
+footer .nav a:hover {
+	text-decoration: underline;
 }
 
 /* ----------------------------------- Social Icons */
 
-
-.social a {
-	font-size: 4.5em;
-	padding: 3rem;
+.social {
+	margin: 5% 0 0 0;
 }
 
-.fa-facebook {
+.social a {
+	font-size: 2rem;
+	margin: 10% 10% 0 0;
+}
+
+.fa-facebook:hover {
 	color: #3b5998;
 }
 
-.fa-google {
+.fa-google:hover {
 	color: #4285f4;
 }
 
-.fa-twitter {
+.fa-twitter:hover {
 	color: #00aced;
 }
 
-.fa-linkedin {
+.fa-linkedin:hover {
 	color: #007bb5;
 }
 
-.fa-youtube {
+.fa-youtube:hover {
 	color: #bb0000;
 }
 
-.fa-facebook:hover,
-.fa-google:hover,
-.fa-twitter:hover,
-.fa-linkedin:hover,
-.fa-youtube:hover {
+.fa-facebook,
+.fa-google,
+.fa-twitter,
+.fa-linkedin,
+.fa-youtube {
 	color: #d5d5d5;
 
 }
 
 /* ----------------------------------- Social Icons END */
-
-footer {
-	width: 100%;
-	background-color: #23415C;
-	padding: 5%;
-	color: white;
-}
-
-.fa-python {
-	color: white;
-	font-size: 1em;
-	margin: 1%;
-}
-
-
-.icon {
-	max-width: 200px;
-}
-
-
-/* ----------------------------------- 768px */
-@media (max-width: 768px){
-
-	.social a {
-	font-size: 2.5em;
-	padding: 1.5rem;
-}
-
-	.landing-text h1 {
-		font-size: 300%;
-	}
-
-	.fa {
-		font-size: 20px;
-		padding: 10px;
-	}
-
-	.icon {
-		padding-top: 5%;
-		max-width: 100px;
-	}
-}

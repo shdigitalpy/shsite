@@ -8,44 +8,46 @@
 
 
     <!--SENDMAIL Start--> {% if message_surname %}
-            <div id="home"><div class="landing-text"><p>Die Nachricht wurde gesendet! Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div></div>
+            <div id="home"><div class="landing-text"><p>Die Nachricht wurde gesendet! Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div>
+            </div>
             {% else %}
     <!--SENDMAIL End-->
 
+
+      <!--Digital erfolgreich und BG-->
       <div id="home">
         <div class="landing-text">
           <h1>Digital erfolgreich</h1>
-          <h1 class="text-secondary h1erfolg">für Unternehmer, Selbständige und Startups</h1>
-          <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
+          <h2>für Unternehmer, Selbständige und Startups</h2>
+            <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
         </div>
       </div>
 
    
        <!--CONTACT FORM Start-->
-          <div id="contact-form" class="shape">
-          <div class=" container formcontainer">
+      <div id="contact-form" class="shape">
+          <div class="container formcontainer">
+            <h3>Jetzt kostenlos und unverbindlich das</h3>
+            <h2>Wachstumspotential</h2>
+            <h3>Ihres Unternehmens erfahren</h3>
+            <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Analyse des Potentials, welches Ihr Unternehmen bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil der aktuellen Kunden sind Kleinunternehmer, welche ein sehr gutes Produkt oder Dienstleistung anbieten, jedoch erst 10 - 20% der potentiellen Kunden erreicht. <b>Können Sie noch 80% und mehr mit Ihrem Unternehmen wachsen? Erfahren Sie dies in den nächsten 24 Stunden völlig kostenlos.</b></p>
+          <div class="controls">                    
+              <form id="contact-form" method="POST" action="{% url 'index' %}">
+              {% csrf_token %}               
 
-                <h3 class="text-warning">Jetzt kostenlos und unverbindlich das</h3><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren</h3>
-                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Analyse des Potentials, welches Ihr Unternehmen bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil der aktuellen Kunden sind Kleinunternehmer, welche ein sehr gutes Produkt oder Dienstleistung anbieten, jedoch erst 10 - 20% der potentiellen Kunden erreicht. <b class="text-warning">Können Sie noch 80% und mehr mit Ihrem Unternehmen wachsen? Erfahren Sie dies in den nächsten 24 Stunden völlig kostenlos.</b></p>
-                   <div class="controls">                    
-                   <form id="contact-form" method="POST" action="{% url 'index' %}">
-                   {% csrf_token %}
-
-                     
-
-                      <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input id="form_name" type="text" name="name" class="form-control" placeholder="Vorname" required="required" data-error="Firstname is required.">
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nachname" required="required" data-error="Lastname is required.">
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
+              <div class="row">
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Vorname" required="required" data-error="Firstname is required.">
+                      <div class="help-block with-errors"></div>
+                     </div>
+                  </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nachname" required="required" data-error="Lastname is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+                 </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">
@@ -56,11 +58,12 @@
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                             <input id="form_phone" type="text" name="url" class="form-control" placeholder="Webseiten URL (z.B. www.sh-digital.ch)">
+                             <input id="form_url" type="text" name="url" class="form-control" placeholder="Webseiten URL (z.B. www.sh-digital.ch)">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
                         </div>
+
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
@@ -76,24 +79,22 @@
                       
                  
                     </form>
-                    </div>
+                  </div>
               </div>
-            
             </div>
-         </div>
         <!--CONTACT FORM End-->       
 
         <!--erste Reihe -->
-        <div class="container padding" id="chefsache">
+        <div class="container" id="kundengewinn">
       
         <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <img src="{% static '/images/pc-bildschirm.png' %}">
-        </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img class="img-responsive" src="{% static '/images/pc-bildschirm.png' %}">
+          </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sidetext" id="digitalbox">
-          <h2>Kundengewinnung</h2>
-          <p class="lead">Lernen Sie von einem <a href="#ueberuns">erfolgreichen Unternehmer</a> durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bluetext" id="digitalbox">
+            <h2>Kundengewinnung</h2>
+            <p>Lernen Sie von einem erfolgreichen Unternehmer durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
         </div>   
 
           </div>
@@ -103,7 +104,7 @@
           <div class="container padding" id="bewertungen">
           <div class="row">
           
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 token">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reviews">
           <div data-romw-token="i8iU8EvQVNVZR64PHIwvIXiMR58kFcI1wMtJdNxi7DnEnWICPh"></div>
           </div>
           </div>
@@ -111,85 +112,81 @@
 
            <!--ZwischenReihe Video -->
           <div class="middlevideo" id="kleinunternehmervideo">
-          <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY?autoplay=1&mute=1" allowfullscreen allow="autoplay"></iframe>
-          </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY?autoplay=1&mute=1" allowfullscreen allow="autoplay"></iframe>
+            </div>
           </div> 
           
 
            <!--dritte Reihe -->
-          <div class="belowvideo sidetext" id="3rdsection">
-          <div class="container">
-          <div class="row">
+          <div class="chefsache bluetext" id="chefsache">
+            <div class="container">
+              <div class="row">
 
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h2>Digital ist Chefsache</h2>
-          <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.-- bis CHF 15'000.-- (inkl. MwSt) je nach Kunden-Situation, Themenbereich und Branche. Lernen Sie wie Sie Ihr Unternehmen digital an die Spitze der Branche führen.</p>
-          <ul class="ul-check success mr-5">
-                <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
-                <li>Digitale Kundengewinnung: Erste Ergebnisse nach drei Monaten</li>
-                <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
-          </ul>   
-
-          </div>
-
-          </div>
-          </div>   
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h2>Digital ist Chefsache</h2>
+                    <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.-- bis CHF 15'000.-- (inkl. MwSt) je nach Kunden-Situation, Themenbereich und Branche. Lernen Sie wie Sie Ihr Unternehmen digital an die Spitze der Branche führen.</p>
+                    <ul class="ul-check success mr-5">
+                    <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
+                    <li>Digitale Kundengewinnung: Erste Ergebnisse nach drei Monaten</li>
+                    <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
+                    </ul>   
+                </div>
+              </div>
+            </div>   
           </div>
 
 
         <!--vierte Reihe -->
         <div class="foto-container" id="ueberuns">
-        <div class="container">
-        <div class="row">
+          <div class="container">
+            <div class="row">
           
           
-          <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">       
-          <img class="img-responsive foto" src="{% static '/images/sandro-huber1.jpg' %}">
-          </div> 
+              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">       
+                <img class="img-responsive foto" src="{% static '/images/sandro-huber1.jpg' %}">
+              </div> 
 
-          <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 sidetext">       
-           <h2>Bereit mit uns <br>zu arbeiten?</h2>
-           <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 15 Mitarbeitern und 10 Millionen Umsatz verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
-           <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse erhalten</button></a>
+              <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 bluetext">     
+                <h2>Bereit mit uns <br>zu arbeiten?</h2>
+                <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 15 Mitarbeitern und 10 Millionen Umsatz verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
+                <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse erhalten</button></a>
           
-          <!--Modal -->
-          <div class="modal fade" tabindex="-1" role="dialog" id="modal">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
+              <!--Modal -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+                  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                    </div>
+                  </div>
+              </div>    
+              <!--Modal End -->
+              <button id="send-modal" type="button" class="btn btn-warning btn-lg">Termin vereinbaren</button>
+                </div> 
+              </div>
             </div>
-          </div>
-          </div>    
-          <!--Modal End -->
-          <button id="send-modal" type="button" class="btn btn-warning btn-lg">Termin vereinbaren</button>
-          </div> 
-          </div>
-          </div>
           </div>
         
 
           <!--Blog -->
-          <div class="padding sidetext gradient" id="blog">
-          <div class="container">
-            <h2 class="blogh2">Unternehmer Blog</h2>
-          <div class="row padding">
-             
-
+          <div class="gradient bluetext padding" id="blog">
+            <div class="container">
+             <h2 class="blogh2">Unternehmer Blog</h2>
+              <div class="row">
             <!--Blog1 -->
               <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
-                      <div class="card">
-                    <img src="{% static '/images/online-kennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen" title="Online Kennzahlen verstehen und anwenden">
-                      <div class="card-body">
-                        <h5 class="card-title">Online Kennzahlen für Kleinunternehmer, Selbständige und Startups</h5>
-                        <p class="card-text">Diese drei Online Kennzahlen sind für die Webseite Ihres Unternehmens unverzichtbar. Mit einer dieser Kennzahlen finden Sie Ihre Bestseller-Produkte und lernen diese richtig zu vermarkten. Mit unseren Methoden können Sie den Umsatz nachhaltig steigern. Der Webcontent an der richtigen Stelle platzieren und Sie begegnen Ihren Kunden online schon deutlich professioneller.</p>
-                        <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Online Kennzahlen</b></a>
+                    <div class="card">
+                        <img src="{% static '/images/online-kennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen" title="Online Kennzahlen verstehen und anwenden">
+                        <div class="card-body">
+                          <h5 class="card-title">Online Kennzahlen für Kleinunternehmer, Selbständige und Startups</h5>
+                          <p class="card-text">Diese drei Online Kennzahlen sind für die Webseite Ihres Unternehmens unverzichtbar. Mit einer dieser Kennzahlen finden Sie Ihre Bestseller-Produkte und lernen diese richtig zu vermarkten. Mit unseren Methoden können Sie den Umsatz nachhaltig steigern. Der Webcontent an der richtigen Stelle platzieren und Sie begegnen Ihren Kunden online schon deutlich professioneller.</p>
+                          <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Online Kennzahlen</b></a>
                       </div>
                     </div>
               </div>
             
             <!--Blog 2 -->
               <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
-                      <div class="card">
+                    <div class="card">
                     <img src="{% static '/images/digital-marketing-strategien.jpg' %}" class="card-img-top" alt="Digital Marketing Strategien" title="Digitales Marketing für Unternehmer">
                       <div class="card-body">
                         <h5 class="card-title">Digital Marketing Strategien</h5>
