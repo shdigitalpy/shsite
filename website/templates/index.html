@@ -6,13 +6,11 @@
 
 {% block content %}
 
-
     <!--SENDMAIL Start--> {% if message_surname %}
-            <div id="home"><div class="landing-text"><p>Die Nachricht wurde gesendet! Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div>
+            <div id="home"><div class="landing-text"><p>{{ success_message }} Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div>
             </div>
             {% else %}
     <!--SENDMAIL End-->
-
 
       <!--Digital erfolgreich und BG-->
       <div id="home">
@@ -93,7 +91,7 @@
           </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bluetext" id="digitalbox">
-            <h2>Kundengewinnung</h2>
+            <h2>Neue Kunden gewinnen</h2>
             <p>Lernen Sie von einem erfolgreichen Unternehmer durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
         </div>   
 

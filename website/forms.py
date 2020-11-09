@@ -9,7 +9,8 @@ class SenderModelForm(BSModalModelForm):
         widgets = {
         	'message_surname': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ihr Vorname'}),
         	'message_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ihre Nachname'}),
-        	'message_email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ihre E-Mail Adresse'}),
+        	'message_email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ihre E-Mail Adresse', 'invalid': 'Haben Sie schon angefragt?'}),
         	'message_phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ihre Telefon'}),
         	'message_body': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Wann sind Sie telefonisch am besten erreichbar'}),
         }
+

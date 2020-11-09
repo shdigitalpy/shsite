@@ -160,13 +160,17 @@
 
   #ueberheader .jumbotron {
       color: var(--blue);
-      padding: 4% 5%;
+      padding: 2% 3%;
+  }
+
+  .place {
+    width: 100% !important;
   }
 
     #ueberheader h1 {
-    font-size: 1.9rem !important;
+    font-size: 1.5rem !important;
   }
     #ueberheader h3 {
-      font-size: 1.5rem !important;
+      font-size: 1.2rem !important;
      }
 }

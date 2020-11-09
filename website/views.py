@@ -5,6 +5,8 @@ from .forms import SenderModelForm
 from django.urls import reverse_lazy
 from bootstrap_modal_forms.generic import BSModalCreateView
 from datetime import datetime
+from django.contrib import messages
+
 
 
 def index(request):
@@ -32,7 +34,8 @@ def index(request):
 			t = Sender(message_name=message_name, message_surname=message_surname, message_email=message_email, message_url=message_url, message_body=message_body)
 			t.save()
 
-		return render(request, 'index.html', {'message_surname': message_surname})
+		success_message = 'Die Nachricht wurde gesendet!'
+		return render(request, 'index.html', {'message_surname': message_surname, 'success_message': success_message})
 
 	else: 
 		return render(request, 'index.html', {})
@@ -64,7 +67,9 @@ def ueber_uns(request):
 class SenderCreateView(BSModalCreateView):
 	template_name = 'send-modal.html'
 	form_class = SenderModelForm
-	success_message = 'Vielen Dank. Termin wurde erfolgreich angefragt. Wir werden uns mit Ihnen in Verbindung setzen.'
+	success_message = 'Die Anfrage wurde gesendet!'
 	success_url = reverse_lazy('index')
+
+
 
 	
