@@ -1,13 +1,11 @@
-{% load static %}
+ {% load static %}
 
 <footer class="container-fluid">
 	<div class="row">
 		
 		<div class="box">
-			<a href="{% url 'index' %}"><img class="img-responsive" src="{% static 'images/logo.png' %}"></a>
-			<br><br>
-			<p>Wir sind ein Team aus Schweizer<br> Digital Business Experten.</p>
-			<p>SH Digital ©  <script>document.write(new Date().getFullYear())</script></p>
+			<h4>Kontakt</h4>
+			<p>SH Digital <br> Widenacker 30 <br>8525 Neunforn <br>Schweiz <br><br>E-Mail: agentur@sh-digital.ch<br>Telefon: 043 508 29 13</p>
 		</div>
 
 		<div class="box">
@@ -32,6 +30,10 @@
 		</div>
 
 	</div>
+<br><br>
+<div class="column">
+	<p style="font-size:0.9rem !important; padding:0 2%;">SH Digital ©  <script>document.write(new Date().getFullYear())</script> | Webagentur | <a>Impressum</a> | <a>Datenschutz</a> | <a>Kontakt</a></p>
+</div>
 
 </footer>
 
@@ -57,6 +59,12 @@
 
 	});
 	</script>
+
+
+	<!-- Clicky.com -->
+	<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101286296);</script>
+	<script async src="//static.getclicky.com/js"></script>
+	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101286296ns.gif" /></p></noscript>
 	
   </body>
 </html>

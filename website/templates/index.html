@@ -6,46 +6,105 @@
 
 {% block content %}
 
-
     <!--SENDMAIL Start--> {% if message_surname %}
-            <div id="home"><div class="landing-text"><p>Die Nachricht wurde gesendet! Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div></div>
+            <div id="home"><div class="landing-text"><p>{{ success_message }} Zurück zur <a href="{% url 'index' %}">Webseite</a>.</p></div>
+            </div>
             {% else %}
     <!--SENDMAIL End-->
 
+      <!--Digital erfolgreich und BG-->
       <div id="home">
-        <div class="landing-text">
-          <h1>Digital erfolgreich</h1>
-          <h1 class="text-secondary h1erfolg">für Unternehmer, Selbständige und Startups</h1>
-          <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
+        
+        <div class="container">
+        <div class="landing-home-text">
+          <h1>Webagentur</h1>
+          <h2>Nachhaltig Kunden über die Webseite gewinnen</h2>
         </div>
       </div>
+        <div class="container">
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="flex">
+                    <div class="flex-item-2">
+                  <img src="{% static '/images/web-development.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="flex-item slidertext">
+                  <h2>Preiswerte Webseiten</h2>
+                  <p>Bei uns kriegen Sie eine professionelle Webseite in Python ab CHF 2'500.--. Einfache Landingpage-Webseiten bereits ab einmalig CHF 500.--  </p><a href="{% url 'index' %}#contact-form"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                </div><!-- End Flex-Item -->
+                  </div><!-- End Flex -->
+                </div>
+                <div class="carousel-item">
+                  <div class="flex">
+                    <div class="flex-item-2">
+                 <img src="{% static '/images/webdesign-code.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="flex-item slidertext">
+                  <h2>Individuelle Web Designs</h2>
+                  <p>Wir setzen Ihre individuellen Wünsche bezüglich Web Design für Sie um. Alles für Sie einzigartig ohne die Verwendung von Templates.</p>
+                  <a href="{% url 'index' %}#contact-form"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                </div><!-- End Flex-Item -->
+                  </div><!-- End Flex -->
+                </div>
+                <div class="carousel-item">
+                <div class="flex">
+                 <div class="flex-item-2">
+                  <img src="{% static '/images/webseite-photoshop.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="flex-item slidertext">
+                  <h2>Gute Platzierung bei Suchmaschinen</h2>
+                  <p>Die Webentwicklung und SEO-Betreuung aus einer Hand bietet entscheidende Vorteile. Bereits ab CHF 1000.-- gibt es bei uns eine monatliche SEO-Betreuung.</p>
+                  <a href="{% url 'index' %}#contact-form"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                </div><!-- End Flex-Item -->
+                  </div><!-- End Flex -->
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div><!-- End Slider -->
+      </div><!-- End Container -->
+      
+      </div><!-- End Home -->
 
    
        <!--CONTACT FORM Start-->
-          <div id="contact-form" class="shape">
-          <div class=" container formcontainer">
+      <div id="contact-form" class="shape">
+          <div class="container formcontainer">
+            <h3>Jetzt kostenlos und unverbindlich das</h3>
+            <h2>Wachstumspotential</h2>
+            <h3>Ihres Unternehmens erfahren</h3>
+            <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Analyse des Potentials, welches Ihr Unternehmen bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil der aktuellen Kunden sind Kleinunternehmer, welche ein sehr gutes Produkt oder Dienstleistung anbieten, jedoch erst 10 - 20% der potentiellen Kunden erreicht. <b>Können Sie noch 80% und mehr mit Ihrem Unternehmen wachsen? Erfahren Sie dies in den nächsten 24 Stunden völlig kostenlos.</b></p>
+          <div class="controls">                    
+              <form id="contact-form" method="POST" action="{% url 'index' %}">
+              {% csrf_token %}               
 
-                <h3 class="text-warning">Jetzt kostenlos und unverbindlich das</h3><h2 class="text-warning">Wachstumspotential</h2><h3 class="text-warning">Ihres Unternehmens erfahren</h3>
-                <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Analyse des Potentials, welches Ihr Unternehmen bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil der aktuellen Kunden sind Kleinunternehmer, welche ein sehr gutes Produkt oder Dienstleistung anbieten, jedoch erst 10 - 20% der potentiellen Kunden erreicht. <b class="text-warning">Können Sie noch 80% und mehr mit Ihrem Unternehmen wachsen? Erfahren Sie dies in den nächsten 24 Stunden völlig kostenlos.</b></p>
-                   <div class="controls">                    
-                   <form id="contact-form" method="POST" action="{% url 'index' %}">
-                   {% csrf_token %}
-
-                     
-
-                      <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input id="form_name" type="text" name="name" class="form-control" placeholder="Vorname" required="required" data-error="Firstname is required.">
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nachname" required="required" data-error="Lastname is required.">
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
+              <div class="row">
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Vorname" required="required" data-error="Firstname is required.">
+                      <div class="help-block with-errors"></div>
+                     </div>
+                  </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nachname" required="required" data-error="Lastname is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+                 </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">
@@ -56,11 +115,12 @@
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
-                             <input id="form_phone" type="text" name="url" class="form-control" placeholder="Webseiten URL (z.B. www.sh-digital.ch)">
+                             <input id="form_url" type="text" name="url" class="form-control" placeholder="Webseiten URL (z.B. www.sh-digital.ch)">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
                         </div>
+
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
@@ -76,24 +136,22 @@
                       
                  
                     </form>
-                    </div>
+                  </div>
               </div>
-            
             </div>
-         </div>
         <!--CONTACT FORM End-->       
 
         <!--erste Reihe -->
-        <div class="container padding" id="chefsache">
+        <div class="container" id="kundengewinn">
       
         <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <img src="{% static '/images/pc-bildschirm.png' %}">
-        </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <img class="img-responsive" src="{% static '/images/pc-bildschirm.png' %}">
+          </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sidetext" id="digitalbox">
-          <h2>Kundengewinnung</h2>
-          <p class="lead">Lernen Sie von einem <a href="#ueberuns">erfolgreichen Unternehmer</a> durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bluetext" id="digitalbox">
+            <h2>Neue Kunden gewinnen</h2>
+            <p>Lernen Sie von einem erfolgreichen Unternehmer durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
         </div>   
 
           </div>
@@ -103,7 +161,7 @@
           <div class="container padding" id="bewertungen">
           <div class="row">
           
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 token">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reviews">
           <div data-romw-token="i8iU8EvQVNVZR64PHIwvIXiMR58kFcI1wMtJdNxi7DnEnWICPh"></div>
           </div>
           </div>
@@ -111,102 +169,98 @@
 
            <!--ZwischenReihe Video -->
           <div class="middlevideo" id="kleinunternehmervideo">
-          <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY?autoplay=1&mute=1" allowfullscreen allow="autoplay"></iframe>
-          </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY?autoplay=1&mute=1" allowfullscreen allow="autoplay"></iframe>
+            </div>
           </div> 
           
 
            <!--dritte Reihe -->
-          <div class="belowvideo sidetext" id="3rdsection">
-          <div class="container">
-          <div class="row">
+          <div class="chefsache bluetext" id="chefsache">
+            <div class="container">
+              <div class="row">
 
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h2>Digital ist Chefsache</h2>
-          <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.-- bis CHF 15'000.-- (inkl. MwSt) je nach Kunden-Situation, Themenbereich und Branche. Lernen Sie wie Sie Ihr Unternehmen digital an die Spitze der Branche führen.</p>
-          <ul class="ul-check success mr-5">
-                <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
-                <li>Digitale Kundengewinnung: Erste Ergebnisse nach drei Monaten</li>
-                <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
-          </ul>   
-
-          </div>
-
-          </div>
-          </div>   
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h2>Digital ist Chefsache</h2>
+                    <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.-- bis CHF 15'000.-- (inkl. MwSt) je nach Kunden-Situation, Themenbereich und Branche. Lernen Sie wie Sie Ihr Unternehmen digital an die Spitze der Branche führen.</p>
+                    <ul class="ul-check success mr-5">
+                    <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
+                    <li>Digitale Kundengewinnung: Erste Ergebnisse nach drei Monaten</li>
+                    <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
+                    </ul>   
+                </div>
+              </div>
+            </div>   
           </div>
 
 
         <!--vierte Reihe -->
         <div class="foto-container" id="ueberuns">
-        <div class="container">
-        <div class="row">
+          <div class="container">
+            <div class="row">
           
           
-          <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">       
-          <img class="img-responsive foto" src="{% static '/images/sandro-huber1.png' %}">
-          </div> 
+              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">       
+                <img class="img-responsive foto" src="{% static '/images/sandro-huber1.jpg' %}">
+              </div> 
 
-          <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 sidetext">       
-           <h2>Bereit mit uns <br>zu arbeiten?</h2>
-           <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 15 Mitarbeitern und 10 Millionen Umsatz verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
-           <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse erhalten</button></a>
+              <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 bluetext">     
+                <h2>Bereit mit uns <br>zu arbeiten?</h2>
+                <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 15 Mitarbeitern und 10 Millionen Umsatz verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
+                <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse erhalten</button></a>
           
-          <!--Modal -->
-          <div class="modal fade" tabindex="-1" role="dialog" id="modal">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
+              <!--Modal -->
+              <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+                  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                    </div>
+                  </div>
+              </div>    
+              <!--Modal End -->
+              <button id="send-modal" type="button" class="btn btn-warning btn-lg">Termin vereinbaren</button>
+                </div> 
+              </div>
             </div>
-          </div>
-          </div>    
-          <!--Modal End -->
-          <button id="send-modal" type="button" class="btn btn-warning btn-lg">Termin vereinbaren</button>
-          </div> 
-          </div>
-          </div>
           </div>
         
 
           <!--Blog -->
-          <div class="padding sidetext gradient" id="blog">
-          <div class="container">
-            <h2 class="blogh2">Aktuelle Themen</h2>
-          <div class="row padding">
-             
-
+          <div class="gradient bluetext padding" id="blog">
+            <div class="container">
+             <h2 class="blogh2">Unternehmer Blog</h2>
+              <div class="row">
             <!--Blog1 -->
-              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div class="card">
-                    <img src="{% static '/images/online-kennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen">
-                      <div class="card-body">
-                        <h5 class="card-title">Online Kennzahlen</h5>
-                        <p class="card-text">Diese drei Online Kennzahlen sind für Sie als Unternehmer und Ihre Webseite unverzichtbar. Wichtige Kennzahlen für das Online Marketing einfach erklärt.</p>
-                        <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Online Kennzahlen</b></a>
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
+                    <div class="card">
+                        <img src="{% static '/images/online-kennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen" title="Online Kennzahlen verstehen und anwenden">
+                        <div class="card-body">
+                          <h5 class="card-title">Online Kennzahlen für Kleinunternehmer, Selbständige und Startups</h5>
+                          <p class="card-text">Diese drei Online Kennzahlen sind für die Webseite Ihres Unternehmens unverzichtbar. Mit einer dieser Kennzahlen finden Sie Ihre Bestseller-Produkte und lernen diese richtig zu vermarkten. Mit unseren Methoden können Sie den Umsatz nachhaltig steigern. Der Webcontent an der richtigen Stelle platzieren und Sie begegnen Ihren Kunden online schon deutlich professioneller.</p>
+                          <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Online Kennzahlen</b></a>
                       </div>
                     </div>
               </div>
             
             <!--Blog 2 -->
-              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div class="card">
-                    <img src="{% static '/images/digital-marketing-strategien.jpg' %}" class="card-img-top" alt="Digital Marketing Strategien">
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
+                    <div class="card">
+                    <img src="{% static '/images/digital-marketing-strategien.jpg' %}" class="card-img-top" alt="Digital Marketing Strategien" title="Digitales Marketing für Unternehmer">
                       <div class="card-body">
                         <h5 class="card-title">Digital Marketing Strategien</h5>
-                        <p class="card-text smalltext">Eine Dashboard Software für ein Basic Online Marketing kostenlos. Von Kunden für Kunden - Helfen Sie mit bei der Weiterentwicklung, wie es bereits andere vor Ihnen getan haben.</p>
+                        <p class="card-text smalltext">Eine einheitliche Digital Marketing Strategie und die Positionierung bei den richtigen Kunden, dies ist die Zauberformel der Online Werbung. Das Ruder aus der Hand geben? Auf keinen Fall bei der Digital Marketing Strategie! Mit unserer Hilfe werden Sie den digitalen Auftritt Ihres Unternehmens wieder zur Chefsache machen und Sie können auf die vielen teuren Google- und Facebook-Marketer verzichten.</p>
                         <a href="{% url 'digital_marketing_strategien' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Digital Marketing Strategien</b></a>
                       </div>
                     </div>
               </div>
 
                <!--Blog 3 -->
-              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
                       <div class="card">
-                    <img src="{% static '/images/wer-wir-sind.jpg' %}" class="card-img-top" alt="Sandro Huber">
+                    <img style="height: 195px" src="{% static '/images/rocket.gif' %}" class="card-img-top" alt="Unternehmenscoaching im digitalen Zeitalter" title="Unternehmenscoaching für Kleinunternehmer">
                       <div class="card-body">
-                        <h5 class="card-title">Wer wir sind - Gründer</h5>
-                        <p class="card-text smalltext">Sandro Huber ist Gründer von SH Digital und Ihr persönlicher Kleinunternehmer Coach. Erfahren Sie mehr über den Background und den Werdegang.</p>
-                        <a href="{% url 'wer_wir_sind' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Wer wir sind - Gründer</b></a>
+                        <h5 class="card-title">Unternehmenscoaching im digitalen Zeitalter</h5>
+                        <p class="card-text smalltext">Sandro Huber ist Gründer von SH Digital und Ihr persönlicher Unternehmenscoach. Erfahren Sie mehr weshalb Sandro Huber in seiner Zeit als Unternehmer einen Coach hätte gebrauchen können. Sandro Huber hat den Weg vom Startup bis zum mittelständischen Unternehmen in allen Bereichen durchlebt. Profitieren Sie von der Erfahrung des "echten" Unternehmenscoach und zahlen Sie nicht für die gleichen Fehler ebenfalls "Lehrgeld".</p>
+                        <a href="{% url 'wer_wir_sind' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Unternehmenscoaching</b></a>
                       </div>
                     </div>
               </div>
@@ -220,5 +274,3 @@
           {% endif %}
 
 {% endblock %}
-
-    

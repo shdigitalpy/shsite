@@ -1,0 +1,50 @@
+/* ----------------------------------- SEPERATE PAGE BLOG */
+
+#blog-header {
+	width: 100%;
+	height: 3rem;
+	margin: 2% 0;
+	display: flex;
+}
+
+#blog-header .badge {
+	padding: 1%;
+	font-size: 1.1rem;
+}
+
+.flexblog-p .breadcrumb {
+	font-size: 1rem !important;
+	font-weight: 700 !important
+	
+}
+
+.flexblog-p {
+	flex: 2;
+	order: 1;
+}
+
+.flexblog-ol {
+	flex: 1;
+	order: 2;
+}
+
+.breadcrumb    {
+    background-color: white;
+}
+
+.breadcrumb-item a {
+	font-size: 1rem !important;
+	font-weight: 700 !important;
+	color: var(--blue);
+} 
+
+.breadcrumb-item .active {
+	font-size: 1rem !important;
+	font-weight: 700 !important;
+	color: orange !important;
+} 
+
+.blog-content p {
+	font-size: 1.1rem !important;
+	font-weight: 500 !important
+}

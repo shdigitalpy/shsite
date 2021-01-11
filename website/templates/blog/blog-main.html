@@ -3,23 +3,25 @@
 {% block content %}
 
 <div class="container">
-<div id = "blog-header">
+<div id="blog-header">
 
-	<nav aria-label="breadcrumb">
+	
 	  	
-	  	<ol class="breadcrumb" style="background-color: #23415C;">
-	  	<p><b>Online Kennzahlen: So überprüfen Sie den digitalen Erfolg Ihres Unternehmens</b></p>
-	  	<li style="padding-left: 10%" class="breadcrumb-item"><a href="{% url 'index' %}#blog">Home</a></li>
-	    <li class="breadcrumb-item active" aria-current="page"><a href="{{ request.path }}">{{ page_bc }}</a></li>
+	  	<div class="flexblog-p"><ol class="breadcrumb"><span class="badge badge-warning">Blog</span>&nbsp&nbsp&nbsp<b>{{ page_k }}</b></ol></div>
+	  	<nav class="flexblog-ol">
+	  	<ol class="breadcrumb">
+	  	<li class="breadcrumb-item"><a href="{% url 'index' %}#blog">Home</a></li>
+	    <li class="breadcrumb-item"><a class="active" href="{{ request.path }}">{{ page_bc }} (Aktuell) </a></li>
 	    </ol> 
-
-	</nav>
+		</nav>
 
 </div>
-<div class="embed-responsive embed-responsive-21by9">
+<!--<div class="embed-responsive embed-responsive-21by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k0W-ly4o6BY" allowfullscreen></iframe>
+</div>-->
+<br><br>
 </div>
 
-</div>
+
 
 {% endblock %}
