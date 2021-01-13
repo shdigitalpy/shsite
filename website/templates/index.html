@@ -14,73 +14,176 @@
 
       <!--Digital erfolgreich und BG-->
       <div id="home">
-        <div class="landing-text">
-          <h1>Digital erfolgreich</h1>
-          <h2>für Unternehmer, Selbständige und Startups</h2>
-            <a href="#contact-form" class="btn btn-warning btn-lg">Mehr erfahren</a>
+        
+        <div class="container">
+        <div class="landing-home-text">
+          <h1>Webagentur</h1>
+          <h2>Nachhaltig Kunden über die Webseite gewinnen</h2>
         </div>
       </div>
+        <div class="container">
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="flex">
+                    <div class="flex-item-2">
+                  <img src="{% static '/images/web-development.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="flex-item slidertext">
+                  <h2>Professionelle Webseiten für jedes Budget</h2>
+                  <p>Bei uns kriegen Sie eine professionelle Webseite für jedes Budget. Einfache Webseiten bereits ab CHF 500.--. Verwenden Sie den Preiskalkulator unten für die Berechnung eines Richtpreises für Ihr individuelles Projekt.</p><a href="{% url 'index' %}#pricing"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                </div><!-- End Flex-Item -->
+                  </div><!-- End Flex -->
+                </div>
+                <div class="carousel-item">
+                  <div class="flex">
+                    <div class="flex-item-2">
+                 <img src="{% static '/images/webdesign-code.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="flex-item slidertext">
+                  <h2>Individuelle Web Designs</h2>
+                  <p>Wir setzen Ihre individuellen Wünsche bezüglich Web Design für Sie um. Alles für Sie einzigartig ohne die Verwendung von Templates.</p>
+                  <a href="{% url 'index' %}#pricing"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                </div><!-- End Flex-Item -->
+                  </div><!-- End Flex -->
+                </div>
+                <div class="carousel-item">
+                <div class="flex">
+                 <div class="flex-item-2">
+                  <img src="{% static '/images/webseite-photoshop.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="flex-item slidertext">
+                  <h2>Gute Platzierung bei Suchmaschinen</h2>
+                  <p>Die Webentwicklung und SEO-Betreuung aus einer Hand bietet entscheidende Vorteile. Bereits ab CHF 1000.-- gibt es bei uns eine monatliche SEO-Betreuung.</p>
+                  <a href="{% url 'seo' %}"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                </div><!-- End Flex-Item -->
+                  </div><!-- End Flex -->
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div><!-- End Slider -->
+      </div><!-- End Container -->
+      
+      </div><!-- End Home -->
 
    
-       <!--CONTACT FORM Start-->
-      <div id="contact-form" class="shape">
+      <!-- Unsere Technologien END --> 
+      <div id="technologie" class="shape">
+        
+        <div class="container formcontainer">
+          <!-- Container (Pricing Section) -->
+<div id="pricing" class="container padding">
+  <div class="text-center">
+    <h2>Webagentur Preise</h2>
+    <br>
+    <p>Bereits für ein kleines Budget kriegen Sie bei uns eine Webseite mit top moderner Technologie (siehe Beschrieb unten), wie Sie auch bei grossen Tech-Unternehmen eingesetzt wird. Dies verschafft Ihnen auch Vorteile, wenn Sie die Webseite einmal ausbauen wollen. Wir können jederzeit eine Webseite Small in eine komplexere Webseite Large erweitern.</p>
+    <div class="row">
+    <div class="col-sm-4 col-xs-12 price">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Webseite Small</h2>
+        </div>
+        <div class="panel-body">
+          <p>Für Einzelunternehmen und Startups</p>
+          <p>Bis zu 5 Unterseiten</p>
+          <p>Persönliche Beratung</p>
+          <p>Inhalt kann mit unserem CMS jederzeit künftig selbst angepasst werden</p>
+          <p>SEO optimiert</p>
+        </div>
+        <div class="panel-footer">
+        <h3>ca. 14 Tage</h3>
+          <h3 class="white"><strong>CHF 500.--<small>(inkl. MwSt)</small></strong></h3>
+          <button class="btn btn-warning btn-md">Mehr Informationen</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12 price">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Webseite Medium</h2>
+        </div>
+        <div class="panel-body">
+          <p>Für kleinere KMU</p>
+          <p>Bis zu 10 Unterseiten</p>
+          <p>Persönliche Beratung</p>
+          <p>Inhalt kann mit unserem CMS jederzeit künftig selbst angepasst werden</p>
+          <p>SEO optimiert</p>
+        </div>
+        <div class="panel-footer">
+        <h3>ca. 14 Tage</h3>
+          <h3 class="white"><strong>CHF 1'250.--<small>(inkl. MwSt)</small></strong></h3>
+          <button class="btn btn-warning btn-md">Mehr Informationen</button>
+        </div>
+      </div>         
+    </div>       
+    <div class="col-sm-4 col-xs-12 price">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Webseite Large</h2>
+        </div>
+       <div class="panel-body">
+          <p>Für grosse Ansprüche verschiedene Firmengrössen</p>
+          <p>Preis je nach Unterseiten</p>
+          <p>Komplexe Warenkorbsysteme</p>
+          <p>Persönliche Beratung</p>
+          <p>Inhalt kann mit unserem CMS jederzeit künftig selbst angepasst werden</p>
+          <p>SEO optimiert</p>
+        </div>
+        <div class="panel-footer">
+        <h3>ca. 14 Tage</h3>
+          <h3 class="white"><strong>ab CHF 3'000.--<small>(inkl. MwSt)</small></strong></h3>
+          <button class="btn btn-warning btn-md">Preiskalkulator</button>
+        </div>
+      </div>      
+    </div>         
+    </div>    
+  <br><br>
+  <p class ="nurmonat"><span class="badge badge-danger">Nur diesen Monat</span> Pauschal 10% Rabatt.<br> Gültig bis Ende {{ today }}</p>
+  </div>
+        </div>
+
           <div class="container formcontainer">
-            <h3>Jetzt kostenlos und unverbindlich das</h3>
-            <h2>Wachstumspotential</h2>
-            <h3>Ihres Unternehmens erfahren</h3>
-            <p>Wir erstellen Ihnen innerhalb von 24 Stunden eine kostenlose Analyse des Potentials, welches Ihr Unternehmen bei der Online-Kundengewinnung abrufen könnte. Ein Grossteil der aktuellen Kunden sind Kleinunternehmer, welche ein sehr gutes Produkt oder Dienstleistung anbieten, jedoch erst 10 - 20% der potentiellen Kunden erreicht. <b>Können Sie noch 80% und mehr mit Ihrem Unternehmen wachsen? Erfahren Sie dies in den nächsten 24 Stunden völlig kostenlos.</b></p>
-          <div class="controls">                    
-              <form id="contact-form" method="POST" action="{% url 'index' %}">
-              {% csrf_token %}               
+            <h2>Mit welchen Technologien wir arbeiten</h2>
 
-              <div class="row">
-                 <div class="col-md-6">
-                    <div class="form-group">
-                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Vorname" required="required" data-error="Firstname is required.">
-                      <div class="help-block with-errors"></div>
-                     </div>
-                  </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nachname" required="required" data-error="Lastname is required.">
-                      <div class="help-block with-errors"></div>
-                  </div>
-                 </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input id="form_email" type="email" name="email" class="form-control" placeholder="E-Mail" required="required" data-error="Valid email is required.">
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                             <input id="form_url" type="text" name="url" class="form-control" placeholder="Webseiten URL (z.B. www.sh-digital.ch)">
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
-                        </div>
+            <img style="width:150px" src="{% static 'images/django-logo-negative.png' %}">
+           
+            <img style="width:200px" src="{% static 'images/python-logo.png' %}">
+           
 
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea id="form_message" name="message" class="form-control" placeholder="Bemerkungen (Branche, Produke, usw.)" required data-error="Bitte eine Eingabe vornehmen"></textarea>
-                              <div class="help-block with-errors"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <input type="submit" class="btn btn-warning btn-lg btn-send" value="Anfrage senden">
-                          </div>
-                        </div>
+          
+            <img style="width:200px" src="{% static 'images/512px-React-icon.svg.png' %}">
+          
 
-                      
-                 
-                    </form>
-                  </div>
-              </div>
-            </div>
-        <!--CONTACT FORM End-->       
+     
+            <img style="width:200px" src="{% static 'images/html-css.png' %}">
+            
+            <br><br><br>
+
+            <p>Neben den Standard Technologien wie Html, CSS und Javascript verwenden wir folgende Webtechnologien:</p>
+            <br>
+            <h3>Was ist Django</h3>
+            <p>Django ist ein High-Level Python Web Framework was schnelles und sauberes Entwickeln ermöglicht. Python hat sich als trendigste Programmiersprache im 2020 herausgestellt, dieser Trend setzt sich auch im 2021 fort. Django als Teil von Python wurde von erfahrenen Webentwicklern ins Leben gerufen und erledigt einen Großteil der Probleme bei der Webentwicklung, sodass der Entwickler sich auf das Konzipieren der Webseite oder App konzentieren kann, ohne das Rad neu erfinden zu müssen. Es ist kostenlos, Open Source und lächerlich schnell.</p>
+             <br>
+             <h3>Was ist React</h3>
+             <p>React ist eine JavaScript Softwarebibliothek, welche sich sowohl für den Aufbau komplexer Anwendungen sowie für Single-Page-Webanwendungen eignet. React wurde 2011 von Facebook entwickelt und später im 2012 für Instagram eingesetzt. Bei moderner Webentwicklung im Frontend Bereich darf React nicht mehr fehlen.</p>
+
+          </div>
+        </div>
+      </div><!-- Unsere Technologien END --> 
 
         <!--erste Reihe -->
         <div class="container" id="kundengewinn">
@@ -91,8 +194,8 @@
           </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bluetext" id="digitalbox">
-            <h2>Neue Kunden gewinnen</h2>
-            <p>Lernen Sie von einem erfolgreichen Unternehmer durch Eins-zu-eins Coaching wie Sie als Kleinunternehmer oder Selbständiger mit weniger als 5 Mitarbeitern digital durchstarten. Mehr als 50 Schweizer Kunden skalieren bereits erfolgreich mit unserer Dienstleistung.</p>
+            <h2>Bereits über 100 Kunden vertrauen auf uns</h2>
+            <p>Wir sind eine junge Webagentur, die bereits einige interessante Projekte durchführen durfte. Nachfolgend finden Sie einige Kundenstimmen von Google my Business.</p>
         </div>   
 
           </div>
@@ -123,11 +226,11 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <h2>Digital ist Chefsache</h2>
-                    <p>Wir bieten Ihnen ein 8 bis 12 Wochen dauerndes Kleinunternehmer Coaching. Der Preis dafür liegt zwischen CHF 5'000.-- bis CHF 15'000.-- (inkl. MwSt) je nach Kunden-Situation, Themenbereich und Branche. Lernen Sie wie Sie Ihr Unternehmen digital an die Spitze der Branche führen.</p>
+                    <p>Bei uns bestimmen Sie die Struktur und die Inhalte Ihrer neuen Webseite selber. Wir gehen auf Ihre Bedürfnisse und Wünsche detalliert ein. Dies ist ein zentraler Punkt, welcher Kunden bei uns erwähnen, was Ihnen bei anderen Agenturen gefehlt hat. </p>
                     <ul class="ul-check success mr-5">
-                    <li>Eine 1:1 Begleitung zum Erreichen Ihrer Ziele</li>
-                    <li>Digitale Kundengewinnung: Erste Ergebnisse nach drei Monaten</li>
-                    <li>Ein wöchentliches Beratungsgespräch per Video Call</li>
+                    <li>Eine 1:1 Begleitung beim Entwicklen Ihrer Webseite. Die durschnittliche Dauer unserer bisherigen Projekte bei Small und Medium beträgt 2 Wochen.</li>
+                    <li>Weiterführende Partnerschaft: Digitale Kundengewinnung & Erste Ergebnisse nach drei Monaten, wenn Sie von uns auch das Online Marketing machen lassen</li>
+                    
                     </ul>   
                 </div>
               </div>
@@ -147,8 +250,7 @@
 
               <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 bluetext">     
                 <h2>Bereit mit uns <br>zu arbeiten?</h2>
-                <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 15 Mitarbeitern und 10 Millionen Umsatz verkauft sowie vielen Kleinunternehmern, Selbständigen und Startups bei der digitalen Skalierung geholfen. Fragen Sie uns für eine kostenlose Analyse Ihres Unternehmens an.</p>
-                <a href="#contact-form"><button type="button" class="btn btn-warning btn-lg">Kostenlose Analyse erhalten</button></a>
+                <p>Meine Name ist Sandro Huber, ich habe selbst ein Schweizer Startup gegründet und nach 8 Jahren mit 12 Mitarbeitern und fast 10 Millionen Umsatz verkauft. Die Webentwicklung und das Online Marketing haben bei diesem Erfolg eine zentrale Rolle eingenommen. Seither habe ich meine Leidenschaft als Dienstleister für viele Kleinunternehmer, Selbständige und Startups angeboten. Fragen Sie uns für eine kostenlose Beratung für die digitale Umsetzung Ihres eigenen Projekts an.</p>
           
               <!--Modal -->
               <div class="modal fade" tabindex="-1" role="dialog" id="modal">
@@ -163,57 +265,8 @@
               </div>
             </div>
           </div>
-        
-
-          <!--Blog -->
-          <div class="gradient bluetext padding" id="blog">
-            <div class="container">
-             <h2 class="blogh2">Unternehmer Blog</h2>
-              <div class="row">
-            <!--Blog1 -->
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
-                    <div class="card">
-                        <img src="{% static '/images/online-kennzahlen.jpg' %}" class="card-img-top" alt="Online Kennzahlen" title="Online Kennzahlen verstehen und anwenden">
-                        <div class="card-body">
-                          <h5 class="card-title">Online Kennzahlen für Kleinunternehmer, Selbständige und Startups</h5>
-                          <p class="card-text">Diese drei Online Kennzahlen sind für die Webseite Ihres Unternehmens unverzichtbar. Mit einer dieser Kennzahlen finden Sie Ihre Bestseller-Produkte und lernen diese richtig zu vermarkten. Mit unseren Methoden können Sie den Umsatz nachhaltig steigern. Der Webcontent an der richtigen Stelle platzieren und Sie begegnen Ihren Kunden online schon deutlich professioneller.</p>
-                          <a href="{% url 'online_kennzahlen' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Online Kennzahlen</b></a>
-                      </div>
-                    </div>
-              </div>
-            
-            <!--Blog 2 -->
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
-                    <div class="card">
-                    <img src="{% static '/images/digital-marketing-strategien.jpg' %}" class="card-img-top" alt="Digital Marketing Strategien" title="Digitales Marketing für Unternehmer">
-                      <div class="card-body">
-                        <h5 class="card-title">Digital Marketing Strategien</h5>
-                        <p class="card-text smalltext">Eine einheitliche Digital Marketing Strategie und die Positionierung bei den richtigen Kunden, dies ist die Zauberformel der Online Werbung. Das Ruder aus der Hand geben? Auf keinen Fall bei der Digital Marketing Strategie! Mit unserer Hilfe werden Sie den digitalen Auftritt Ihres Unternehmens wieder zur Chefsache machen und Sie können auf die vielen teuren Google- und Facebook-Marketer verzichten.</p>
-                        <a href="{% url 'digital_marketing_strategien' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Digital Marketing Strategien</b></a>
-                      </div>
-                    </div>
-              </div>
-
-               <!--Blog 3 -->
-              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 cardbox">
-                      <div class="card">
-                    <img style="height: 195px" src="{% static '/images/rocket.gif' %}" class="card-img-top" alt="Unternehmenscoaching im digitalen Zeitalter" title="Unternehmenscoaching für Kleinunternehmer">
-                      <div class="card-body">
-                        <h5 class="card-title">Unternehmenscoaching im digitalen Zeitalter</h5>
-                        <p class="card-text smalltext">Sandro Huber ist Gründer von SH Digital und Ihr persönlicher Unternehmenscoach. Erfahren Sie mehr weshalb Sandro Huber in seiner Zeit als Unternehmer einen Coach hätte gebrauchen können. Sandro Huber hat den Weg vom Startup bis zum mittelständischen Unternehmen in allen Bereichen durchlebt. Profitieren Sie von der Erfahrung des "echten" Unternehmenscoach und zahlen Sie nicht für die gleichen Fehler ebenfalls "Lehrgeld".</p>
-                        <a href="{% url 'wer_wir_sind' %}" class="btn btn-warning btn-sm">Zum Blog <br><b>Unternehmenscoaching</b></a>
-                      </div>
-                    </div>
-              </div>
-
-
-
-            </div>
-            </div>
-            </div>
+      
 
           {% endif %}
 
 {% endblock %}
-
-    

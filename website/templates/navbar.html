@@ -15,17 +15,24 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dienstleistungen
+                  Kompetenzen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{% url 'index' %}#chefsache">Kleinunternehmer Coaching</a>
+                  <a class="dropdown-item" href="{% url 'web_design' %}">Web Design</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{% url 'ueber_uns' %}#pricing">Business Development</a>
+                  <a class="dropdown-item" href="{% url 'web_entwicklung' %}">Web Entwicklung</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{% url 'ueber_uns' %}#pricing">Website überarbeiten</a>
+                  <a class="dropdown-item" href="{% url 'seo' %}">Suchmaschinenoptimierung (SEO)</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'google_ads' %}">Google Ads (ehemalig Google Adwords)</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'facebook_ads' %}">Facebook Ads</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{% url 'coaching' %}">Digitales Coaching</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#bewertungen">Bewertungen</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'ueber_uns' %}">Über uns</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#projekte">Ergebnisse</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'ueber_uns' %}">Agentur</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#kontakt">Kontakt</a></li>
               <a href="{% url 'index' %}#contact-form"><button type="button" class="btn btn-warning btn-lg">Jetzt loslegen</button></a>
           </ul>
           </div>

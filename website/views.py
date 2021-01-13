@@ -34,11 +34,80 @@ def index(request):
 			t = Sender(message_name=message_name, message_surname=message_surname, message_email=message_email, message_url=message_url, message_body=message_body)
 			t.save()
 
+		x = datetime.now()
+		today = x.strftime('%m' + '.' + '%Y')
+
+		context = {
+			'today': today,
+			'message_surname': message_surname,
+			'success_message': success_message
+
+		 }
+		 
+
+		success_message = 'Die Nachricht wurde gesendet!'
+		return render(request, 'index.html',context)
+
+	else:
+		x = datetime.now()
+		today = x.strftime('%m' + '.' + '%Y')
+		context = {
+			'today': today,
+
+		 }
+		return render(request, 'index.html', context)
+
+def web_design(request):
+	context = { }
+	return render(request, 'web-design.html', context)
+
+def web_entwicklung(request):
+	context = { }
+	return render(request, 'web-entwicklung.html', context)
+
+def seo(request):
+	context = { }
+	return render(request, 'seo.html', context)
+
+def google_ads(request):
+	context = { }
+	return render(request, 'google-ads.html', context)
+
+def facebook_ads(request):
+	context = { }
+	return render(request, 'facebook-ads.html', context)
+
+def coaching(request):
+	if request.method == "POST":
+		message_name = request.POST['name']
+		message_surname = request.POST['surname']
+		message_email = request.POST['email']
+		message_url = request.POST['url']
+		message_body = request.POST['message']
+
+		send_mail(
+    		'Ihre Antwort - ' + message_name + ' ' + message_surname,
+    		message_surname + ' ' + message_name + ' möchte eine 24 Stunden Analyse.' + ' Folgende Nachricht wurde hinterlassen:' + message_body + ' ' + 'Die Url lautet: ' + message_url,
+    		message_email,
+    		['sandro@sh-digital.ch'],
+    		fail_silently=False,
+			)
+
+		if Sender.objects.filter(message_email=message_email).exists():
+			t = Sender.objects.get(message_email=message_email)
+			t.message_body = message_body
+			t.save()
+
+		else: 
+			t = Sender(message_name=message_name, message_surname=message_surname, message_email=message_email, message_url=message_url, message_body=message_body)
+			t.save()
+
 		success_message = 'Die Nachricht wurde gesendet!'
 		return render(request, 'index.html', {'message_surname': message_surname, 'success_message': success_message})
 
 	else: 
-		return render(request, 'index.html', {})
+		return render(request, 'coaching.html', {})
+
 
 def kennzahlen(request):
 	page_bc = 'Online Kennzahlen'
@@ -57,11 +126,7 @@ def wer_wir_sind(request):
 	return render(request, 'blog/wer-wir-sind.html', context)
 
 def ueber_uns(request):
-	
-	x = datetime.now()
-	today = x.strftime('%m' + '.' + '%Y')
-
-	context = {'today': today }
+	context = {}
 	return render (request, 'ueber-uns.html', context)
 
 class SenderCreateView(BSModalCreateView):
