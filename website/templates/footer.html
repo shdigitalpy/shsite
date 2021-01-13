@@ -1,37 +1,81 @@
-{% load static %}
+ {% load static %}
 
 <footer class="container-fluid">
 	<div class="row">
 		
 		<div class="box">
-			<a href="{% url 'index' %}"><img class="img-responsive" src="{% static 'images/logo.png' %}"></a>
+			<h4>Kontakt</h4>
+			<p>SH Digital <br> Widenacker 30 <br>8525 Neunforn <br>Schweiz <br><br>E-Mail: agentur@sh-digital.ch<br>Telefon: 043 508 29 13</p>
+
+			<a style="font-size: 2rem" href="">Jetzt Beratung anfordern</a>
 			<br><br>
-			<p>Wir sind ein Team aus Schweizer<br> Digital Business Experten.</p>
-			<p>SH Digital ©  <script>document.write(new Date().getFullYear())</script></p>
+			<p style="font-size: 1rem !important">Preise: ab 500 CHF<br>
+			Einzugsgebiete: Schweiz (z.B. Thurgau, Zürich, Bern, Basel, Luzern, usw.), Deutschland</p>
 		</div>
 
 		<div class="box">
-			<h4>Unternehmen</h4>
+			<h4>Weitere Services</h4>
 		<ul class="nav flex-column">
-			
-				<li class="nav-item">
-			<a class="nav-link" href="{% url 'index' %}#ueberuns">Bereit mit uns zu arbeiten</a></li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'web_design' %}">Webdesign</a><a class="nav-link" href="{% url 'web_entwicklung' %}">Webentwicklung</a></li>
 		<li class="nav-item">
-			<a class="nav-link" href="{% url 'online_kennzahlen' %}">Online Kennzahlen Blog</a></li>
+				<a class="nav-link" href="{% url 'seo' %}">SEO</a></li>
+		
 		<li class="nav-item">
-				<a class="nav-link" href="{% url 'ueber_uns' %}#portfolio">Projekte</a></li>
+				<a class="nav-link" href="{% url 'google_ads' %}">Google Ads</a></li>
+		
 		<li class="nav-item">
-				<a class="nav-link" href="{% url 'ueber_uns' %}#services">Partnerschaften</a></li>
+				<a class="nav-link" href="{% url 'facebook_ads' %}">Facebook Ads</a></li>
+
+		<li class="nav-item">
+				<a class="nav-link" href="{% url 'coaching' %}">Digitales Coaching</a></li>
+	
 		</ul>
+		<br>
+		<h5 style="font-size: 1.2rem !important; color:var(--white); text-decoration: underline;">Bewertung unserer Dienstleistung</h5>
+		<div style="display: flex;">
+		<div style="flex: 50% 0 0;" data-romw-token="Xx8G7CatdF4R6tPaWR0Ek9nxW1kmiC8RG0dtCR2LgrVfdClYxE"></div><div style="flex: 50% 0 0;" data-romw-token="qSTu6VTocnpmM0i58w9QCWfOvq5jsEIEToEiZI4aKFAtnlRPe1"></div>
+		</div>
+
+
+			
 		
 		</div>
 
 		<div class="box">
 		<!--Social Icons -->
+		<h4>Unsere Vorteile</h4>
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#portfolio">Schnelle Umsetzung</a></li>
+		<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#portfolio">Erfolgsorientiert</a></li>
+				
+		
+		</ul>
+		<br>
+
+		<h4>Unternehmen</h4>
+
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#portfolio">Über uns</a></li>
+		<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#portfolio">Aktuelle Projekte</a></li>
+		<li class="nav-item">
+				<a class="nav-link" href="{% url 'ueber_uns' %}#services">CMS</a></li>
+		
+		</ul>
+		
+
           {% include 'social-icons.html' %}
 		</div>
 
 	</div>
+<br><br>
+<div class="column">
+	<p style="font-size:0.9rem !important; padding:0 2%;"><a href="{% url 'index' %}">SH Digital</a> ©  <script>document.write(new Date().getFullYear())</script> | Webagentur | <a>Impressum</a> | <a>Datenschutz</a> | <a>Kontakt</a></p>
+</div>
 
 </footer>
 
@@ -57,6 +101,20 @@
 
 	});
 	</script>
+
+
+	<!-- Clicky.com -->
+	<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101286296);</script>
+	<script async src="//static.getclicky.com/js"></script>
+	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101286296ns.gif" /></p></noscript>
+
+	<!-- Load React. -->
+	  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+	  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+	  <!-- Load our React component. -->
+	  <script src="{% static 'js/like_button.js' %}"></script>
 	
   </body>
 </html>
