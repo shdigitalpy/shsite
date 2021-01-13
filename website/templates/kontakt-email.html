@@ -1,0 +1,191 @@
+{% load static %}
+
+
+<html lang="de">
+  <head> 
+  <style type="text/css">
+
+    /*
+      --blue: #29384e;
+      --lightblue: #BFDAF3;
+      --white: #ffffff;
+      --yellow: #ffc107;
+      --grey: #f6f6f6;
+      --lightgrey: #e6e6e6;
+      --darkergrey: #A0A0A0;
+      --green: #73C44D;
+      --muted: #999999;
+      --hellblau: #ebf5ff;
+    */
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+      background-color: #e6e6e6;
+  }
+
+    .container {
+      width: 90%;
+      margin: 2% auto;
+      padding: 3%;
+      background-color: white;
+
+    }
+
+    h2 {
+      margin: 2.5% 0 0.5% 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0.5% 0;
+    }
+
+    .table-big {
+      width: 90%;
+      background-color: #f6f6f6;
+      text-align: center;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    .table-big thead th {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ffffff;
+      border-left: 0.25px solid #ffffff;
+    }
+
+    .table-big td, .table-big th {
+      border: 0.1px solid #29384e;
+      padding: 1%;
+  
+    }
+
+    .table-big tbody td {
+      font-size: 1.1rem;
+      padding: 1%;
+
+    }
+
+    .table-big thead {
+      background: #29384e;
+      
+    }
+
+     .table-small {
+      width: 30%;
+      text-align: left !important;
+      border: none;
+      background-color: white;
+      table-layout: fixed;
+    }
+
+      .table-small thead th {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #29384e;
+        border: none;
+      }
+
+      .table-small td, .table-small th {
+        border: none;
+        padding: 1%;
+    
+      }
+
+      .table-small tbody td {
+        font-size: 1rem;
+        padding: 1%;
+
+      }
+
+      .table-small thead {
+        background: #ffffff;
+        
+      }
+
+      img {
+        width: 15vw;
+        height: auto;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .flex-item1 {
+        flex: 20% 0 0;
+        font-size: 1.5rem;
+        text-decoration: none;
+        background-color: #29384e;
+        text-align: center;
+        padding: 1%;
+        color: white;
+      }
+
+      .flex-item2 {
+        flex: 20% 0 0;
+      }
+
+      
+
+</style>  
+  </head>
+  <body>
+
+<div class="container">
+
+<h2>Kontaktaufnahme</h2>
+<p>Die nachfolgende Person hat das Kontaktformular ausgefüllt.</p>
+<br>
+
+
+<table class="table-big">
+  <thead>
+    <tr>
+        <th scope="col">Anrede</th>
+        <th scope="col">Vorname</th>
+        <th scope="col">Nachname</th>
+        <th scope="col">Firma</th>
+        <th scope="col">E-Mail</th>
+        <th scope="col">Telefon</th>
+        
+    </tr>
+  </thead>
+  <tbody>
+  	
+    <tr>
+      <td>{{ anrede }}</td>
+      <td>{{ vorname }}</td>
+      <td>{{ nachname }}</td>
+      <td>{{ firma }}</td>
+      <td>{{ email }}</td>
+      <td>{{ telefon }}</td>
+
+    </tr>
+     
+  </tbody>
+</table>
+<br><br><br>
+<table class="table-big">
+  <thead>
+    <tr>
+        <th scope="col">Nachricht</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ nachricht }}</td>
+    </tr>
+     
+  </tbody>
+</table>
+
+
+</div><!--end container-->
+</body>
+</html>

@@ -77,6 +77,43 @@ def facebook_ads(request):
 	context = { }
 	return render(request, 'facebook-ads.html', context)
 
+def kontakt(request):
+	if request.method =="POST":
+		vorname = request.POST['message-vorname']
+		nachname = request.POST['message-name']
+		firma = request.POST['message-firma']
+		email = request.POST['message-email']
+		nachricht = request.POST['message']
+		telefon = request.POST['message-phone']
+		anrede = request.POST['message-anrede']		
+		
+		subject = 'Nachricht von ' + ' '+ firma + ' ' + vorname + ' ' + nachname		
+		template = render_to_string('kontakt-email.html', 
+			{
+				'anrede' : anrede,			
+				'vorname': vorname, 			
+				'nachname': nachname,			
+				'firma': firma,			
+				'email': email,			
+				'telefon': telefon,			
+				'nachricht': nachricht,
+			})#send email for order		
+		email = EmailMessage(
+				subject,			
+				template,			
+				email,			
+				['sandro@sh-digital.ch'],)		
+
+		email.fail_silently=False		
+		email.content_subtype = "html"
+		email.send()
+
+		context = { }
+		return render(request, 'kontakt.html', context)
+	else:
+		context = { }
+		return render(request, 'kontakt.html', context)
+
 def coaching(request):
 	if request.method == "POST":
 		message_name = request.POST['name']

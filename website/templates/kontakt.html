@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Kontakt | SH Digital {% endblock %}
+{% block meta_description %}Das ist die Meta Beschreibung SEO optimiert.{% endblock %}
+{% block keywords %}Online Kennzahlen, Kundengewinnung, Online Marketing {% endblock %}
+
+{% block content %}
+
+
+    <!--SENDMAIL Start--> {% if messages %}
+            <div id="home"><div class="landing-text" style="font-size: 2.5rem"><p>Die Nachricht wurde gesendet! Zurück zur <a href="{% url 'home' %}">Webseite</a>.</p></div></div>
+            {% else %}
+    <!--SENDMAIL End-->
+    <br>    <br>    <br>    <br>    <br>
+<div class="container">
+  <div class="row">
+     <div class="col-lg-5">
+      <div class="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d336.33233872728186!2d8.787567941108433!3d47.59388002100262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a854f4987578b%3A0xbdf0b5c6589e15b4!2sWidenacker%2030%2C%208525%20Niederneunforn!5e0!3m2!1sde!2sch!4v1610573840904!5m2!1sde!2sch" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+     </div>
+
+     <div class="col-lg-7 pl-5">
+          <div class="contact-information">
+            <h5>SH Digital</h5>
+            <p>Widenacker 30<br>
+            8525 Neunforn</p>
+            <h5>Telefon</h5>
+            <p>+41 (0)43 508 29 13</p>
+            <h5>E-Mail</h5>
+            <p class="mb-0">agentur@sh-digital.ch</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-7">
+          <div class="contact-form">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <br><br>
+              <h2>Kontakt</h2>
+              <div class="line"></div>
+            </div>
+            <!-- Form -->
+            <form action="{% url 'kontakt' %}" method="post">
+              {% csrf_token %}
+              
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" name="message-anrede" class="form-control mb-30" placeholder="Anrede">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" name="message-company" class="form-control mb-30" placeholder="Firma">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" name="message-vorname" class="form-control mb-30" placeholder="Vorname">
+                </div>
+                 <div class="col-lg-6">
+                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Nachname">
+                </div>
+                 <div class="col-lg-6">
+                  <input type="text" name="message-phone" class="form-control mb-30" placeholder="Telefon">
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" name="message-email" class="form-control mb-30" placeholder="E-Mail">
+                </div>
+                <div class="col-12 textarea-contact">
+                  <textarea name="message" class="form-control"  placeholder="Nachricht"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-warning">Abschicken</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div><!--end row-->
+    </div><!--container row-->
+    <br>    <br>    <br>    <br>    <br>
+
+    {% endif %}
+
+
+
+
+{% endblock %}
+
+    

@@ -7,7 +7,7 @@
 			<h4>Kontakt</h4>
 			<p>SH Digital <br> Widenacker 30 <br>8525 Neunforn <br>Schweiz <br><br>E-Mail: agentur@sh-digital.ch<br>Telefon: 043 508 29 13</p>
 
-			<a style="font-size: 2rem" href="">Jetzt Beratung anfordern</a>
+			<a style="font-size: 2rem" href="{% url 'kontakt' %}">Jetzt Beratung anfordern</a>
 			<br><br>
 			<p style="font-size: 1rem !important">Preise: ab 500 CHF<br>
 			Einzugsgebiete: Schweiz (z.B. Thurgau, Zürich, Bern, Basel, Luzern, usw.), Deutschland</p>
@@ -74,7 +74,7 @@
 	</div>
 <br><br>
 <div class="column">
-	<p style="font-size:0.9rem !important; padding:0 2%;"><a href="{% url 'index' %}">SH Digital</a> ©  <script>document.write(new Date().getFullYear())</script> | Webagentur | <a>Impressum</a> | <a>Datenschutz</a> | <a>Kontakt</a></p>
+	<p style="font-size:0.9rem !important; padding:0 2%;"><a href="{% url 'index' %}">SH Digital</a> ©  <script>document.write(new Date().getFullYear())</script> | Webagentur | <a>Impressum</a> | <a>Datenschutz</a> | <a href="{% url 'kontakt' %}">Kontakt</a></p>
 </div>
 
 </footer>
