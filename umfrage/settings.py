@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'bootstrap_modal_forms',
 ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
