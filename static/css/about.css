@@ -31,6 +31,13 @@
 	text-align: center;
 }
 
+#portfolio h3 {
+  font-size: 1.3rem !important;
+  margin: 5% 0 0 0;
+  color: var(--blue);
+  opacity: 0.8;
+}
+
 #portfolio .thumbnail:hover {
 	-webkit-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
 	-moz-box-shadow: -4px 7px 20px -3px rgba(0,0,0,0.74);
@@ -40,12 +47,27 @@
 }
 
 #portfolio .thumbnail {
-	padding: 5%;
+	padding: 10%;
+}
+
+#portfolio .thumbnail img {
+  margin: 0 0 5% 0;
+}
+
+
+#portfolio ul {
+  padding: 0 !important;
+}
+
+#portfolio .thumbnail ul li {
+  list-style-type: none;
+  margin: 1% 0;
 }
 
 #portfolio .port-title {
 	max-width: 100%;
   height: auto;
+  font-size: 1.7rem !important;
 }
 
 #visionpic {

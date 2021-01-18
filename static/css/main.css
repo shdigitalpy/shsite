@@ -7,7 +7,7 @@
 	--yellow: #ffc107;
 	--grey: #f6f6f6;
 	--lightgrey: #aaa;
-	--darkergrey: #A0A0A0;
+	--darkergrey: #2d2d2d;
 }
 
 html, body {
@@ -81,16 +81,14 @@ h5 {
 /* ----------------------------------- Home bgimage and title */
 
 #home {
-	background: url('/static/images/web-agentur-universum.jpg') no-repeat center center fixed;
+	background: url('/static/images/web-agentur-schweiz.jpg') no-repeat center center fixed;
 	display: table;
 	position: relative;
 	width: 100%;
 	height: 100%;
-	-o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+
 }
+
 
 #coaching {
 	background: url('/static/images/mountains.jpeg') no-repeat center center fixed;
@@ -111,11 +109,12 @@ h5 {
 }
 
 .landing-text h2 {
-	color: var(--darkergrey);
-	
+	color: var(--darkergrey);	
 }
 
 /* Home -------- */
+
+
 
 .landing-home-text {
 	margin: 8% 0 0 0;
@@ -123,6 +122,8 @@ h5 {
 
 .landing-home-text h1 {
 	color: var(--white);
+	-webkit-text-stroke: 2px var(--white);
+	font-weight: 900;
 }
 
 .landing-home-text h2 {
@@ -131,7 +132,9 @@ h5 {
 }
 
 .slider {
-	margin: 10% 0 0;
+	margin: 15% 0 0;
+	width: 50%
+	margin: 0 auto;
 }
 
 .flex {
@@ -139,19 +142,14 @@ h5 {
 	display: -ms-flexbox;
 	display: flex;
 	overflow: hidden;
-	background-color: rgba(35,65,92,0.55);
 	padding: 5%;
 }
 
 .flex-item {
-	flex: 70% 0 0;
+	flex: 50% 0 0;
+	margin: 0 auto;
 	
 }
-
-.flex-item-2 {
-	flex: 30% 0 0;
-	}
-
 
 .slidertext {
 	padding: 0 4%;
@@ -166,7 +164,7 @@ h5 {
 
 .carousel-item h2 {
 	font-size: 1.8rem !important;
-	color: var(--yellow);
+	color: var(--white);
 	border-bottom: 0.1px solid var(--grey);
 }
 
@@ -475,7 +473,18 @@ footer .nav a {
 	padding: 0.4rem 0 !important;
 }
 
+
+
 footer .nav a:hover {
+	text-decoration: underline;
+}
+
+footer a {
+	color: white;
+}
+
+footer a:hover {
+	color: white;
 	text-decoration: underline;
 }
 

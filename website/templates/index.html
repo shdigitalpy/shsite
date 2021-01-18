@@ -12,15 +12,16 @@
             {% else %}
     <!--SENDMAIL End-->
 
-      <!--Digital erfolgreich und BG-->
-      <div id="home">
-        
+      <!--Webagentur-->
+      <div id="home">    
         <div class="container">
         <div class="landing-home-text">
           <h1>Webagentur</h1>
+          <div id="root"></div>
           <h2>Nachhaltig Kunden über die Webseite gewinnen</h2>
         </div>
       </div>
+
         <div class="container">
         <div class="slider">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -32,36 +33,30 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="flex">
-                    <div class="flex-item-2">
-                  <img src="{% static '/images/web-development.jpg' %}" alt="First slide">
-                  </div>
+                  
                   <div class="flex-item slidertext">
-                  <h2>Professionelle Webseiten für jedes Budget</h2>
-                  <p>Bei uns kriegen Sie eine professionelle Webseite für jedes Budget. Einfache Webseiten bereits ab CHF 500.--. Verwenden Sie den Preiskalkulator unten für die Berechnung eines Richtpreises für Ihr individuelles Projekt.</p><a href="{% url 'index' %}#pricing"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                  <h2>Professionelle Webseiten <br>für jedes Budget</h2>
+                  <p>Bei uns kriegen Sie eine professionelle Webseite für jedes Budget. Einfache Webseiten bereits ab CHF 500.--. Verwenden Sie den Preiskalkulator unten für die Berechnung eines Richtpreises für Ihr individuelles Projekt.</p><a href="{% url 'index' %}#pricing"><button type="button" class="btn btn-primary btn-md">Zu den Preisen</button></a>
                 </div><!-- End Flex-Item -->
                   </div><!-- End Flex -->
                 </div>
                 <div class="carousel-item">
                   <div class="flex">
-                    <div class="flex-item-2">
-                 <img src="{% static '/images/webdesign-code.jpg' %}" alt="First slide">
-                  </div>
+                    
                   <div class="flex-item slidertext">
                   <h2>Individuelle Web Designs</h2>
                   <p>Wir setzen Ihre individuellen Wünsche bezüglich Web Design für Sie um. Alles für Sie einzigartig ohne die Verwendung von Templates.</p>
-                  <a href="{% url 'index' %}#pricing"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                  <a href="{% url 'web_design' %}#pricing"><button type="button" class="btn btn-primary btn-md">Mehr über Webdesign</button></a>
                 </div><!-- End Flex-Item -->
                   </div><!-- End Flex -->
                 </div>
                 <div class="carousel-item">
                 <div class="flex">
-                 <div class="flex-item-2">
-                  <img src="{% static '/images/webseite-photoshop.jpg' %}" alt="First slide">
-                  </div>
+                 
                   <div class="flex-item slidertext">
                   <h2>Gute Platzierung bei Suchmaschinen</h2>
                   <p>Die Webentwicklung und SEO-Betreuung aus einer Hand bietet entscheidende Vorteile. Bereits ab CHF 1000.-- gibt es bei uns eine monatliche SEO-Betreuung.</p>
-                  <a href="{% url 'seo' %}"><button type="button" class="btn btn-primary btn-sm">Mehr</button></a>
+                  <a href="{% url 'seo' %}"><button type="button" class="btn btn-primary btn-md">Mehr über SEO</button></a>
                 </div><!-- End Flex-Item -->
                   </div><!-- End Flex -->
                 </div>
@@ -78,6 +73,7 @@
         </div><!-- End Slider -->
       </div><!-- End Container -->
       
+      </div>
       </div><!-- End Home -->
 
    
