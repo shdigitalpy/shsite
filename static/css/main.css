@@ -3,11 +3,15 @@
 /* ----------------------------------- Main CSS elements */
 :root {
 	--blue:	#23415c;
+	--lightblue: #61dbfb;
 	--white: #ffffff;
 	--yellow: #ffc107;
 	--grey: #f6f6f6;
 	--lightgrey: #aaa;
 	--darkergrey: #2d2d2d;
+	--red: #e62739;
+	--black: #000000;
+
 }
 
 html, body {
@@ -52,6 +56,28 @@ h5 {
 
 .padding img {
 	width: 100%;
+}
+
+#meinBtn {
+	display: none;
+	position: fixed; 
+	bottom: 30px; 
+	right: 50px;
+	z-index: 99; 
+	border: none; 
+	outline: none; 
+	background-color: rgba(13, 24, 33, 0.45);
+	color: var(--white);
+	cursor: pointer; 
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(13, 24, 33, 0.45);
+	font-size: 1.5rem;
+	width: 3rem;
+	line-height: 3rem;
+}
+
+#meinBtn:hover {
+  	background-color: rgba(13, 24, 33, 0.75);
 }
 
 /* ----------------------------------- Navigation */

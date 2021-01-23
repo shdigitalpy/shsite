@@ -115,6 +115,32 @@
 
 	  <!-- Load our React component. -->
 	  <script src="{% static '/js/like_button.js' %}"></script>
-	
+		
+	<!-- Scroll to top -->
+	  <script type="text/javascript">
+
+	  	const btnScrollToTop = document.querySelector("#meinBtn")
+
+	  	window.onscroll = function() {scrollFunction()};
+
+	  	function scrollFunction() {
+	  		if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000 ) {
+	  			btnScrollToTop.style.display = "block";
+	  		} else {
+	  			btnScrollToTop.style.display = "none";
+	  		}
+	  	}
+	  	
+	  	
+
+	  	btnScrollToTop.addEventListener("click", function() {
+
+	  		$("html, body").animate({scrollTop: 0}, "slow");
+
+	  	});
+	  	
+
+	  </script>
+
   </body>
 </html>
